@@ -1,0 +1,69 @@
+{
+  "69193a87e2147615ce92bf00": {
+    "itemTplToClone": "5efaf417aeb21837e749c7f2",
+    "parentId": "55818a104bdc2db9688b4569",
+    "handbookParentId": "5b5f75e486f77447ec5d7712",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "Ergonomics": 11,
+      "Recoil": -5.5
+    },
+    "locales": {
+      "en": {
+        "name": "AK Zenit B-30 Rev. 2",
+        "shortName": "B30 Rev.2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 32545,
+    "handbookPriceRoubles": 18327,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_handguard"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  }
+}

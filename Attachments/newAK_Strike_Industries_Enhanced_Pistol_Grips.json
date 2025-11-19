@@ -1,0 +1,140 @@
+{
+  "69138b25672be00a9f74eef0": {
+    "itemTplToClone": "5cf50850d7f00c056e24104c",
+    "parentId": "55818a684bdc2ddd698b456d",
+    "handbookParentId": "5b5f761f86f774094242f1a1",
+    "overrideProperties": {
+      "Accuracy": 0.5,
+      "BackgroundColor": "violet",
+      "Ergonomics": 14,
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "Recoil": -0.5,
+      "RarityPvE": "Rare"
+    },
+    "locales": {
+      "en": {
+        "name": "AK Strike Industries Enhanced Pistol Grip (Black) Rev. 2",
+        "shortName": "AKEPG R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 38544,
+    "handbookPriceRoubles": 17775,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_pistol_grip"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  },
+  "69138b1e01e5b709ab3a47b8": {
+    "itemTplToClone": "5cf508bfd7f00c056e24104e",
+    "parentId": "55818a684bdc2ddd698b456d",
+    "handbookParentId": "5b5f761f86f774094242f1a1",
+    "overrideProperties": {
+      "Accuracy": 0.5,
+      "BackgroundColor": "violet",
+      "Ergonomics": 14,
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "Recoil": -0.5,
+      "RarityPvE": "Rare"
+    },
+    "locales": {
+      "en": {
+        "name": "AK Strike Industries Enhanced Pistol Grip (FDE) Rev. 2",
+        "shortName": "AKEPG R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 38544,
+    "handbookPriceRoubles": 17775,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_pistol_grip"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  }
+}

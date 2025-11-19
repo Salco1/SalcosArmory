@@ -1,0 +1,206 @@
+{
+  "6913809f3cf4b24af9e9175a": {
+    "itemTplToClone": "558032614bdc2de7118b4585",
+    "parentId": "55818af64bdc2d5b648b4570",
+    "handbookParentId": "5b5f71de86f774093f2ecf13",
+    "overrideProperties": {
+      "Accuracy": 1,
+      "BackgroundColor": "violet",
+      "Ergonomics": 11,
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "Recoil": -4.5
+    },
+    "locales": {
+      "en": {
+        "name": "TangoDown Stubby BGV-MK46K foregrip (Black) Rev. 2",
+        "shortName": "MK46K R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 33544,
+    "handbookPriceRoubles": 17845,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_foregrip"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  },
+  "691385ea0e0bcb3382a9416f": {
+    "itemTplToClone": "58c157be86f77403c74b2bb6",
+    "parentId": "55818af64bdc2d5b648b4570",
+    "handbookParentId": "5b5f71de86f774093f2ecf13",
+    "overrideProperties": {
+      "Accuracy": 1,
+      "BackgroundColor": "violet",
+      "Ergonomics": 11,
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "Recoil": -4.5
+    },
+    "locales": {
+      "en": {
+        "name": "TangoDown Stubby BGV-MK46K foregrip (FDE) Rev. 2",
+        "shortName": "MK46K R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 33544,
+    "handbookPriceRoubles": 17845,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_foregrip"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  },
+  "691385faea055d0459a5d57b": {
+    "itemTplToClone": "58c157c886f774032749fb06",
+    "parentId": "55818af64bdc2d5b648b4570",
+    "handbookParentId": "5b5f71de86f774093f2ecf13",
+    "overrideProperties": {
+      "Accuracy": 1,
+      "BackgroundColor": "violet",
+      "Ergonomics": 11,
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "Recoil": -4.5
+    },
+    "locales": {
+      "en": {
+        "name": "TangoDown Stubby BGV-MK46K foregrip (Stealth Grey) Rev. 2",
+        "shortName": "MK46K R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 33544,
+    "handbookPriceRoubles": 17845,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_foregrip"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  }
+}

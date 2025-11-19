@@ -1,0 +1,72 @@
+{
+  "691377baadf5cb5a56222014": {
+    "itemTplToClone": "5ea172e498dacb342978818e",
+    "parentId": "550aa4bf4bdc2dd6348b456b",
+    "handbookParentId": "5b5f724c86f774093f2ecf15",
+    "overrideProperties": {
+      "Accuracy": 3,
+      "BackgroundColor": "violet",
+      "DurabilityBurnModificator": 1.05,
+      "Ergonomics": -1.5,
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "RarityPvE": "Rare",
+      "Recoil": -7
+    },
+    "locales": {
+      "en": {
+        "name": "AR-15 SureFire SF4P 5.56x45 flash hider Rev. 2",
+        "shortName": "SF4P R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 33211,
+    "handbookPriceRoubles": 16544,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_muzzle"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  }
+}

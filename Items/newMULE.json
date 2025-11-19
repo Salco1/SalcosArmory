@@ -1,0 +1,66 @@
+{
+  "6915e22280a3b8eb5ddef6ea": {
+    "itemTplToClone": "5ed51652f6c34d2cc26336a1",
+    "parentId": "5448f3a64bdc2d60728b456a",
+    "handbookParentId": "5b47574386f77428ca22b33a",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "medUseTime": 3,
+      "MaxHpResource": 3,
+      "RarityPvE": "Superrare"
+    },
+    "locales": {
+      "en": {
+        "name": "M.U.L.E. stimulant injector Rev. 2",
+        "shortName": "MULE Rev.2",
+        "description": "Muscular Ultra Large Exciter. It is used to expand the body's abilities before long marches. Developed by ODIN and Sanitar."
+      }
+    },
+    "fleaPriceRoubles": 0,
+    "handbookPriceRoubles": 72555,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDCASE",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
+        "Probability": 29
+      }
+    ],
+    "addtoTraders": false
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "6915e681e8b8b510a195ab7d": {
+    "itemTplToClone": "590c657e86f77412b013051d",
+    "parentId": "5448f39d4bdc2d0a728b4568",
+    "handbookParentId": "5b47574386f77428ca22b338",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "MaxHpResource": 1100,
+      "RarityPvE": "Rare",
+      "hpResourceRate": 90,
+      "medEffectType": "duringUse",
+      "medUseTime": 4,
+      "Height": 1,
+      "Width": 1,
+      "effects_damage": {
+        "LightBleeding": {
+          "cost": 40,
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 0,
+          "healthPenaltyMax": 0,
+          "healthPenaltyMin": 0
+        },
+        "HeavyBleeding": {
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 0,
+          "healthPenaltyMax": 0,
+          "healthPenaltyMin": 0
+        },
+        "Contusion": {
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 0,
+          "healthPenaltyMax": 0,
+          "healthPenaltyMin": 0
+        }
+      },
+      "effects_health": {
+        "Energy": {
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 0,
+          "healthPenaltyMax": 0,
+          "healthPenaltyMin": 0
+        },
+        "Hydration": {
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 0,
+          "healthPenaltyMax": 0,
+          "healthPenaltyMin": 0
+        }
+      }
+    },
+    "locales": {
+      "en": {
+        "name": "UFAK Individual first aid kit - #Rev. 2",
+        "shortName": "UFAK R2",
+        "description": "The UFAK (Ultimate First Aid Kit) is considered one of the best first aid kits. Developed by ODIN and Sanitar."
+      }
+    },
+    "fleaPriceRoubles": 87500,
+    "handbookPriceRoubles": 35042,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDCASE",
+        "Probability": 45
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
+        "Probability": 45
+      }
+    ],
+    "addtoTraders": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "6919fbf54cb2293b32ace0d5": {
+    "itemTplToClone": "5ac66d015acfc400180ae6e4",
+    "parentId": "5447b5f14bdc2d61278b4567",
+    "handbookParentId": "5b5f78fc86f77409407a7f90",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "bFirerate": 720,
+	  "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": true,
+      "ExaminedByDefault": true
+    },
+    "locales": {
+      "en": {
+        "name": "Kalashnikov AK-102 5.56x45 assault rifle - #Rev. 2",
+        "shortName": "AK-102R2",
+        "description": "A modified variant of the Kalashnikov AK-102. Modified by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 76214,
+    "handbookPriceRoubles": 51648,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "probability": 30
+      },
+	  {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "probability": 30
+      }
+    ],
+    "addtoTraders": false
+  }
+}

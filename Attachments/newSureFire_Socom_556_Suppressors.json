@@ -1,0 +1,146 @@
+{
+  "69137910f3292e7743439b8e": {
+    "itemTplToClone": "55d614004bdc2d86028b4568",
+    "parentId": "550aa4cd4bdc2dd8348b456c",
+    "handbookParentId": "5b5f731a86f774093e6cb4f9",
+    "overrideProperties": {
+      "Accuracy": 1,
+      "BackgroundColor": "violet",
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "DurabilityBurnModificator": 1.69,
+      "Ergonomics": -11,
+      "HeatFactor": 1.19,
+      "Loudness": -76,
+      "RarityPvE": "Superrare",
+      "Recoil": -11
+    },
+    "locales": {
+      "en": {
+        "name": "SureFire SOCOM556-MONSTER 5.56x45 sound suppressor Rev. 2",
+        "shortName": "556MNSTR R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 77455,
+    "handbookPriceRoubles": 43000,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_muzzle"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  },
+  "691a0d0b2e9d56a28c2127b1": {
+    "itemTplToClone": "55d6190f4bdc2d87028b4567",
+    "parentId": "550aa4cd4bdc2dd8348b456c",
+    "handbookParentId": "5b5f731a86f774093e6cb4f9",
+    "overrideProperties": {
+      "Accuracy": 0.5,
+      "BackgroundColor": "violet",
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "DurabilityBurnModificator": 1.73,
+      "Ergonomics": -9,
+      "HeatFactor": 1.22,
+      "Loudness": -69,
+      "RarityPvE": "Superrare",
+      "Recoil": -9
+    },
+    "locales": {
+      "en": {
+        "name": "SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor Rev. 2",
+        "shortName": "MNSTRm R2",
+        "description": "Reforged by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 38544,
+    "handbookPriceRoubles": 17775,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_muzzle"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  }
+}

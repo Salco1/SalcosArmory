@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latestMajor</LangVersion>
+    <AssemblyName>SalcosArmory</AssemblyName>
+    <RootNamespace>SalcosArmory</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Core SPT server library -->
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.2" />
+    <!-- WTT server library; if your existing projects use a different package ID or version, match that setup -->
+    <PackageReference Include="WTT-ServerCommonLib" Version="2.0.4" />
+  </ItemGroup>
+</Project>

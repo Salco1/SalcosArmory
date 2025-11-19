@@ -1,0 +1,68 @@
+{
+  "6919bcc51791eac836e054c8": {
+    "itemTplToClone": "55d482194bdc2d1d4e8b456b",
+    "parentId": "5448bc234bdc2d3c308b4569",
+    "handbookParentId": "5b5f754a86f774094242f19b",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "Ergonomics": -8,
+      "ConflictingItems": [],
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "CheckTimeModifier": 10,
+      "RarityPvE": "Rare",
+      "LoadUnloadModifier": 12,
+      "MalfunctionChance": 0.023
+    },
+    "locales": {
+      "en": {
+        "name": "AK 6L31 60-round 5.45x39 magazine - #Rev. 2",
+        "shortName": "6L31 Rev.2",
+        "description": "A further improved version of the Izhmash-manufactured 60-round 6L31. Reworked by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 72654,
+    "handbookPriceRoubles": 42210,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "modSlot": [
+      "mod_magazine"
+    ],
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "Probability": 40
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "Probability": 40
+      }
+    ],
+    "addtoTraders": false
+  }
+}

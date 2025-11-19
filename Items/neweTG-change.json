@@ -1,0 +1,78 @@
+{
+  "6919defd80356dd043e9621a": {
+    "itemTplToClone": "5c0e534186f7747fa1419867",
+    "parentId": "5448f3a64bdc2d60728b456a",
+    "handbookParentId": "5b47574386f77428ca22b33a",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "medUseTime": 3,
+      "MaxHpResource": 3,
+      "RarityPvE": "Superrare",
+      "effects_damage": {
+        "Pain": {
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 2
+        },
+        "Contusion": {
+          "delay": 0,
+          "duration": 300,
+          "fadeOut": 0
+        }
+      }
+    },
+    "locales": {
+      "en": {
+        "name": "eTG-change regenerative stimulant injector - #Rev. 2",
+        "shortName": "eTG R2",
+        "description": "A powerful stimulant for regeneration processes. Developed by ODIN and Sanitar."
+      }
+    },
+    "fleaPriceRoubles": 0,
+    "handbookPriceRoubles": 72555,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDCASE",
+        "Probability": 30
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
+        "Probability": 30
+      }
+    ],
+    "addtoTraders": false
+  }
+}

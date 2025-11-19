@@ -1,0 +1,65 @@
+{
+  "691a3b1d2fe93c81a25d92f7": {
+    "itemTplToClone": "5c94bbff86f7747ee735c08f",
+    "parentId": "5c164d2286f774194c5e69fa",
+    "handbookParentId": "5c518ed586f774119a772aee",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "MaximumNumberOfUsage": 10,
+      "RarityPvE": "Superrare"
+    },
+    "locales": {
+      "en": {
+        "name": "TerraGroup Labs access keycard - #hacked",
+        "shortName": "Access",
+        "description": "A hacked access keycard for Labs."
+      }
+    },
+    "fleaPriceRoubles": 930555,
+    "handbookPriceRoubles": 545444,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDCASE",
+        "Probability": 10
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
+        "Probability": 10
+      }
+    ],
+    "addtoTraders": false
+  }
+}

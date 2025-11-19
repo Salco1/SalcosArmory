@@ -1,0 +1,85 @@
+{
+  "69161d7c4f556aa60c98aa13": {
+    "itemTplToClone": "5d02797c86f774203f38e30a",
+    "parentId": "5448f3ac4bdc2dce718b4569",
+    "handbookParentId": "5b47574386f77428ca22b339",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": true,
+      "RarityPvE": "Superrare",
+      "MaxHpResource": 20,
+      "medUseTime": 15,
+      "Height": 1,
+      "Width": 2,
+      "effects_damage": {
+        "Fracture": {
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 0,
+          "healthPenaltyMax": 0,
+          "healthPenaltyMin": 0
+        },
+        "DestroyedPart": {
+          "delay": 0,
+          "duration": 0,
+          "fadeOut": 0,
+          "healthPenaltyMax": 66,
+          "healthPenaltyMin": 55
+        }
+      },
+      "effects_health": []
+    },
+    "locales": {
+      "en": {
+        "name": "Surv20 field surgical kit",
+        "shortName": "Surv20",
+        "description": "An advanced surgical kit with additional high-quality tools, allowing treating serious injuries right on the battlefield. Developed by ODIN and Sanitar."
+      }
+    },
+    "fleaPriceRoubles": 94125,
+    "handbookPriceRoubles": 72000,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "StaticLootContainers": [
+      {
+        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDCASE",
+        "Probability": 29
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
+        "Probability": 29
+      }
+    ],
+    "addtoTraders": false
+  }
+}
