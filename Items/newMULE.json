@@ -13,7 +13,7 @@
     },
     "locales": {
       "en": {
-        "name": "M.U.L.E. stimulant injector Rev. 2",
+        "name": "M.U.L.E. stimulant injector - #Rev. 2",
         "shortName": "MULE Rev.2",
         "description": "Muscular Ultra Large Exciter. It is used to expand the body's abilities before long marches. Developed by ODIN and Sanitar."
       }
@@ -26,39 +26,39 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDCASE",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
-        "Probability": 2600
+        "Probability": 3400
       }
     ],
     "addtoTraders": false

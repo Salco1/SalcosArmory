@@ -1,29 +1,50 @@
 {
-  "69193a87e2147615ce92bf00": {
-    "itemTplToClone": "5efaf417aeb21837e749c7f2",
-    "parentId": "55818a104bdc2db9688b4569",
-    "handbookParentId": "5b5f75e486f77447ec5d7712",
+  "6930a594219c45e84f4915ef": {
+    "itemTplToClone": "5894a05586f774094708ef75",
+    "parentId": "5448bc234bdc2d3c308b4569",
+    "handbookParentId": "5b5f754a86f774094242f19b",
     "overrideProperties": {
       "BackgroundColor": "violet",
+      "Ergonomics": -2,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Ergonomics": 11,
-      "Recoil": -5.5
+      "Cartridges": [
+        {
+          "_id": "6930a5a51433458b5729cf6d",
+          "_max_count": 30,
+          "_name": "cartridges",
+          "_parent": "6930a594219c45e84f4915ef",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5ba26812d4351e003201fef1",
+                  "5ba26835d4351e0035628ff5",
+				  "5ba2678ad4351e44f824b344",
+				  "5ba26844d4351e00334c9475",
+				  "64b6979341772715af0f9c39"				  
+                ]
+              }
+            ]
+          },
+          "_proto": "5748538b2459770af276a261"
+        }
+      ]
     },
     "locales": {
       "en": {
-        "name": "AK Zenit B-30 - #Rev. 2",
-        "shortName": "B30 Rev.2",
+        "name": "4.6x.30mm 30-round for the MPX46",
+        "shortName": "MPX46",
         "description": "Reforged by ODIN."
       }
     },
-    "fleaPriceRoubles": 32545,
-    "handbookPriceRoubles": 18327,
+    "fleaPriceRoubles": 22154,
+    "handbookPriceRoubles": 2073,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_handguard"
+      "mod_magazine"
     ],
     "addtoStaticLootContainers": true,
     "StaticLootContainers": [

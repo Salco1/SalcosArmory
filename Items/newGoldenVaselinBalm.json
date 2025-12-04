@@ -1,48 +1,53 @@
 {
-  "69161d7c4f556aa60c98aa13": {
-    "itemTplToClone": "5d02797c86f774203f38e30a",
-    "parentId": "5448f3ac4bdc2dce718b4569",
+  "69319edad4b5c15b68c63e4f": {
+    "itemTplToClone": "5755383e24597772cb798966",
+    "parentId": "5448f3a14bdc2d27728b4569",
     "handbookParentId": "5b47574386f77428ca22b339",
     "overrideProperties": {
       "BackgroundColor": "violet",
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "RarityPvE": "Superrare",
-      "MaxHpResource": 20,
-      "medUseTime": 15,
-      "Height": 1,
-      "Width": 2,
+      "MaxHpResource": 10,
+      "RarityPvE": "Rare",
+      "medUseTime": 6,
       "effects_damage": {
-        "Fracture": {
+        "Contusion": {
           "delay": 0,
           "duration": 0,
-          "fadeOut": 0,
-          "healthPenaltyMax": 0,
-          "healthPenaltyMin": 0
+          "fadeOut": 0
         },
-        "DestroyedPart": {
+        "Pain": {
+          "delay": 0,
+          "duration": 500,
+          "fadeOut": 2
+        },
+        "RadExposure": {
           "delay": 0,
           "duration": 0,
-          "fadeOut": 0,
-          "healthPenaltyMax": 66,
-          "healthPenaltyMin": 55
+          "fadeOut": 0
         }
       },
-      "effects_health": []
+      "effects_health": {
+        "Energy": {
+          "value": -19
+        }
+      },
+      "hpResourceRate": 0,
+      "medEffectType": "duringUse"
     },
     "locales": {
       "en": {
-        "name": "Surv20 field surgical kit",
-        "shortName": "Surv20",
-        "description": "An advanced surgical kit with additional high-quality tools, allowing treating serious injuries right on the battlefield. Developed by ODIN and Sanitar."
+        "name": "Golden Vaseline Balm",
+        "shortName": "GoldenBalm",
+        "description": "Golden Vaseline Balsam is an almost secret mixture of German ingredients such as potatoes and sauerkraut. No one knows what else it contains, but it has an impressive effect. Developed by ODIN and Sanitar."
       }
     },
-    "fleaPriceRoubles": 94125,
-    "handbookPriceRoubles": 72000,
+    "fleaPriceRoubles": 62555,
+    "handbookPriceRoubles": 45000,
     "addtoBots": true,
-	"addtoSpecialSlots": true,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,
+    "addtoSpecialSlots": true,
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",

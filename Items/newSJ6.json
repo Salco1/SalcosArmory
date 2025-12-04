@@ -14,7 +14,7 @@
     },
     "locales": {
       "en": {
-        "name": "SJ6 TGLabs combat stimulant injector Rev. 2",
+        "name": "SJ6 TGLabs combat stimulant injector - #Rev. 2",
         "shortName": "SJ6 Rev.2",
         "description": "A combat stimulant. It is used to increase the body abilities before combat. Developed by ODIN and Sanitar."
       }
@@ -27,39 +27,39 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDCASE",
-        "Probability": 2600
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
-        "Probability": 2600
+        "Probability": 3400
       }
     ],
     "addtoTraders": false

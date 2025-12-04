@@ -30,39 +30,39 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_COMMON_SUPPLY_CRATE",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_SUPPLY_CRATE",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_SUPPLY_CRATE_2",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_TECHNICAL_SUPPLY_CRATE_EVENT_1",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_BURIED_BARREL_CACHE",
-        "Probability": 900
+        "Probability": 3400
       },
       {
         "ContainerName": "LOOTCONTAINER_TECHNICAL_SUPPLY_CRATE",
-        "Probability": 900
+        "Probability": 3400
       }
     ],
     "addtoTraders": false

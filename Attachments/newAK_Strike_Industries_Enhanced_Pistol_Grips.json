@@ -15,7 +15,7 @@
     },
     "locales": {
       "en": {
-        "name": "AK Strike Industries Enhanced Pistol Grip (Black) Rev. 2",
+        "name": "AK Strike Industries Enhanced Pistol Grip (Black) - #Rev. 2",
         "shortName": "AKEPG R2",
         "description": "Reforged by ODIN."
       }
@@ -31,39 +31,39 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 2500
+        "Probability": 3450
       }
     ],
     "addtoTraders": false
@@ -100,39 +100,39 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 2500
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 2500
+        "Probability": 3450
       }
     ],
     "addtoTraders": false

@@ -29,39 +29,39 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDCASE",
-        "Probability": 1200
+        "Probability": 1500
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
-        "Probability": 1200
+        "Probability": 1500
       }
     ],
     "addtoTraders": false

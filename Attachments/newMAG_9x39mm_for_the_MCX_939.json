@@ -1,29 +1,52 @@
 {
-  "69193a87e2147615ce92bf00": {
-    "itemTplToClone": "5efaf417aeb21837e749c7f2",
-    "parentId": "55818a104bdc2db9688b4569",
-    "handbookParentId": "5b5f75e486f77447ec5d7712",
+  "69307714cb7a026432094121": {
+    "itemTplToClone": "5c6d450c2e221600114c997d",
+    "parentId": "5448bc234bdc2d3c308b4569",
+    "handbookParentId": "5b5f754a86f774094242f19b",
     "overrideProperties": {
       "BackgroundColor": "violet",
+      "Ergonomics": -2,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Ergonomics": 11,
-      "Recoil": -5.5
+      "Cartridges": [
+        {
+          "_id": "6272874a6c47bd74f92e2089",
+          "_max_count": 30,
+          "_name": "cartridges",
+          "_parent": "69307714cb7a026432094121",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5c0d688c86f77413ae3407b2",
+                  "61962d879bb3d20b0946d385",
+				  "57a0dfb82459774d3078b56c",
+				  "57a0e5022459774d1673f889",
+				  "5c0d668f86f7747ccb7f13b2",
+				  "6576f96220d53a5b8f3e395e"
+				  
+                ]
+              }
+            ]
+          },
+          "_proto": "5748538b2459770af276a261"
+        }
+      ]
     },
     "locales": {
       "en": {
-        "name": "AK Zenit B-30 - #Rev. 2",
-        "shortName": "B30 Rev.2",
+        "name": "9x39mm Gen.2 STANAG 30-Round magazine for the MCX-939",
+        "shortName": "PM Gen.2",
         "description": "Reforged by ODIN."
       }
     },
-    "fleaPriceRoubles": 32545,
-    "handbookPriceRoubles": 18327,
+    "fleaPriceRoubles": 33544,
+    "handbookPriceRoubles": 3425,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_handguard"
+      "mod_magazine"
     ],
     "addtoStaticLootContainers": true,
     "StaticLootContainers": [
