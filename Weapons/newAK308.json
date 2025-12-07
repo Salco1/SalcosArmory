@@ -42,7 +42,8 @@
             "filters": [
               {
                 "Filter": [
-                  "649ec107961514b22506b10c"
+                  "649ec107961514b22506b10c",
+				  "6934988fd675e60e80e81c07"
                 ],
                 "Shift": 0
               }
@@ -80,7 +81,21 @@
               {
                 "Filter": [
                   "649ec2af961514b22506b10f",
-                  "64c196ad26a15b84aa07132f"
+                  "64c196ad26a15b84aa07132f",
+				  "5ac72e945acfc43f3b691116",
+                  "5ac7655e5acfc40016339a19",
+                  "5649aa744bdc2ded0b8b457e",
+                  "5f633f791b231926f2329f13",
+                  "5943eeeb86f77412d6384f6b",
+                  "5cc9a96cd7f00c011c04e04a",
+                  "615d8f5dd92c473c770212ef",
+                  "5649ab884bdc2ded0b8b457f",
+                  "57dc324a24597759501edc20",
+                  "59bffc1f86f77435b128b872",
+                  "593d493f86f7745e6b2ceb22",
+                  "564caa3d4bdc2d17108b458e",
+                  "57ffb0e42459777d047111c5",
+                  "5e21ca18e4d47f0da15e77dd"
                 ],
                 "Shift": 0
               }
@@ -140,7 +155,8 @@
             "filters": [
               {
                 "Filter": [
-                  "649ec2f3961514b22506b111"
+                  "649ec2f3961514b22506b111",
+				  "5649af094bdc2df8348b4586"
                 ],
                 "Shift": 0
               }
@@ -163,7 +179,8 @@
                   "5beec8b20db834001961942a",
                   "6386300124a1dc425c00577a",
                   "649ec87d8007560a9001ab36",
-                  "6761779c48fa5c377e06fc3f"
+                  "6761779c48fa5c377e06fc3f",
+				  "6087e2a5232e5a31c233d552"
                 ],
                 "Shift": 0
               }
@@ -229,7 +246,7 @@
               }
             ]
           },
-          "_required": true,
+          "_required": false,
           "_mergeSlotWithChildren": false,
           "_proto": "55d30c4c4bdc2db4468b457e"
         }
@@ -250,47 +267,47 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3500
+        "Probability": 4500
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3500
+        "Probability": 4500
       }
     ],
     "addtoTraders": false
