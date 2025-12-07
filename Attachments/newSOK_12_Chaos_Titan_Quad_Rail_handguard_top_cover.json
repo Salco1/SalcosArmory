@@ -1,32 +1,29 @@
 {
-  "6919bcc51791eac836e054c8": {
-    "itemTplToClone": "55d482194bdc2d1d4e8b456b",
-    "parentId": "5448bc234bdc2d3c308b4569",
-    "handbookParentId": "5b5f754a86f774094242f19b",
+  "69349d3c3c72a53711df9f18": {
+    "itemTplToClone": "674fe89a4472d471fb0f07d8",
+    "parentId": "55818b224bdc2dde698b456f",
+    "handbookParentId": "5b5f755f86f77447ec5d770e",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "Ergonomics": -8,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "CheckTimeModifier": 10,
-      "RarityPvE": "Rare",
-      "LoadUnloadModifier": 12,
-      "MalfunctionChance": 0.023
+      "Ergonomics": 4,
+      "Recoil": -2
     },
     "locales": {
       "en": {
-        "name": "AK 6L31 60-round 5.45x39 magazine - #Rev. 2",
-        "shortName": "6L31 Rev.2",
-        "description": "A further improved version of the Izhmash-manufactured 60-round 6L31. Reworked by ODIN."
+        "name": "SOK-12 Chaos Titan Quad Rail handguard - #Rev. 2",
+        "shortName": "TQRTC Rev.2",
+        "description": "Reforged by ODIN."
       }
     },
-    "fleaPriceRoubles": 72654,
-    "handbookPriceRoubles": 42210,
+    "fleaPriceRoubles": 22455,
+    "handbookPriceRoubles": 10241,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_magazine"
+      "mod_mount"
     ],
     "addtoStaticLootContainers": true,
     "StaticLootContainers": [
@@ -48,6 +45,10 @@
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "Probability": 4350
+      },
+      {
+        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
         "Probability": 4350
       },
       {

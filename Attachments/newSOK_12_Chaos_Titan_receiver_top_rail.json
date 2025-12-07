@@ -1,50 +1,52 @@
 {
-  "6930a594219c45e84f4915ef": {
-    "itemTplToClone": "5894a05586f774094708ef75",
-    "parentId": "5448bc234bdc2d3c308b4569",
-    "handbookParentId": "5b5f754a86f774094242f19b",
+  "69349de012d99987998ebf38": {
+    "itemTplToClone": "674fe8b9362ea1f88b0e278d",
+    "parentId": "55818b224bdc2dde698b456f",
+    "handbookParentId": "5b5f755f86f77447ec5d770e",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "Ergonomics": -2,
-      "ConflictingItems": [],
+      "ConflictingItems": [
+	    "5947db3f86f77447880cf76f",
+        "57486e672459770abd687134",
+        "576fd4ec2459777f0b518431",
+        "5a7c74b3e899ef0014332c29",
+        "591ee00d86f774592f7b841e",
+        "57acb6222459771ec34b5cb0",
+        "6113d6c3290d254f5e6b27db",
+        "5c82343a2e221644f31c0611",
+        "5c82342f2e221644f31c060e",
+        "618a5d5852ecee1505530b2a",
+        "6544d4187c5457729210d277",
+        "63d114019e35b334d82302f7",
+        "5c90c3622e221601da359851",
+        "618a75c9a3884f56c957ca1b",
+        "638db77630c4240f9e06f8b6",
+        "5d0a29ead7ad1a0026013f27",
+        "65f1b2a5c14a07890801fc70",
+		"5d2c76ed48f03532f2136169",
+		"5d2c770c48f0354b4a07c100",
+		"5d2c772c48f0355d95672c25",
+		"5649af884bdc2d1b2b8b4589",
+		"649ec2f3961514b22506b111"
+	  ],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Cartridges": [
-        {
-          "_id": "6930a5a51433458b5729cf6d",
-          "_max_count": 30,
-          "_name": "cartridges",
-          "_parent": "6930a594219c45e84f4915ef",
-          "_props": {
-            "filters": [
-              {
-                "Filter": [
-                  "5ba26812d4351e003201fef1",
-                  "5ba26835d4351e0035628ff5",
-				  "5ba2678ad4351e44f824b344",
-				  "5ba26844d4351e00334c9475",
-				  "64b6979341772715af0f9c39"				  
-                ]
-              }
-            ]
-          },
-          "_proto": "5748538b2459770af276a261"
-        }
-      ]
+      "Ergonomics": 1,
+      "Recoil": -1
     },
     "locales": {
       "en": {
-        "name": "4.6x.30mm 30-round for the MPX46",
-        "shortName": "MPX46",
+        "name": "SOK-12 Chaos Titan Quad Rail handguard - #Rev. 2",
+        "shortName": "TTR Rev.2",
         "description": "Reforged by ODIN."
       }
     },
-    "fleaPriceRoubles": 22154,
-    "handbookPriceRoubles": 2073,
+    "fleaPriceRoubles": 22455,
+    "handbookPriceRoubles": 10241,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_magazine"
+      "mod_mount"
     ],
     "addtoStaticLootContainers": true,
     "StaticLootContainers": [

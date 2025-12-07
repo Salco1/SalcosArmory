@@ -1,91 +1,97 @@
 {
-  "69138b25672be00a9f74eef0": {
-    "itemTplToClone": "5cf50850d7f00c056e24104c",
-    "parentId": "55818a684bdc2ddd698b456d",
-    "handbookParentId": "5b5f761f86f774094242f1a1",
+  "6932f43c4d4baeb2d28feadf": {
+    "itemTplToClone": "67716a6fd639fc1f46654118",
+    "parentId": "550aa4cd4bdc2dd8348b456c",
+    "handbookParentId": "5b5f731a86f774093e6cb4f9",
     "overrideProperties": {
-      "Accuracy": 0.5,
+      "Accuracy": 1,
       "BackgroundColor": "violet",
-      "Ergonomics": 14,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Recoil": -0.5,
-      "RarityPvE": "Rare"
+      "DurabilityBurnModificator": 1.69,
+      "Ergonomics": -11,
+      "HeatFactor": 1.19,
+      "Loudness": -76,
+      "RarityPvE": "Superrare",
+      "Recoil": -14
     },
     "locales": {
       "en": {
-        "name": "AK Strike Industries Enhanced Pistol Grip (Black) - #Rev. 2",
-        "shortName": "AKEPG R2",
+        "name": "Echoes Defense Strikewrap 46 Multi-Caliber sound suppressor #clone",
+        "shortName": "Strikewrap",
         "description": "Reforged by ODIN."
       }
     },
-    "fleaPriceRoubles": 38544,
-    "handbookPriceRoubles": 17775,
+    "fleaPriceRoubles": 77455,
+    "handbookPriceRoubles": 43000,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_pistol_grip"
+      "mod_muzzle"
     ],
     "addtoStaticLootContainers": true,
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 4350
+        "Probability": 3450
       },
       {
         "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 4350
+        "Probability": 3450
       }
     ],
     "addtoTraders": false
   },
-  "69138b1e01e5b709ab3a47b8": {
-    "itemTplToClone": "5cf508bfd7f00c056e24104e",
-    "parentId": "55818a684bdc2ddd698b456d",
-    "handbookParentId": "5b5f761f86f774094242f1a1",
+  "691a0d0b2e9d56a28c2127b1": {
+    "itemTplToClone": "55d6190f4bdc2d87028b4567",
+    "parentId": "550aa4cd4bdc2dd8348b456c",
+    "handbookParentId": "5b5f731a86f774093e6cb4f9",
     "overrideProperties": {
       "Accuracy": 0.5,
       "BackgroundColor": "violet",
-      "Ergonomics": 14,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Recoil": -0.5,
-      "RarityPvE": "Rare"
+      "DurabilityBurnModificator": 1.73,
+      "Ergonomics": -9,
+      "HeatFactor": 1.22,
+      "Loudness": -69,
+      "RarityPvE": "Superrare",
+      "Recoil": -9
     },
     "locales": {
       "en": {
-        "name": "AK Strike Industries Enhanced Pistol Grip (FDE) Rev. 2",
-        "shortName": "AKEPG R2",
+        "name": "SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor Rev. 2",
+        "shortName": "MNSTRm R2",
         "description": "Reforged by ODIN."
       }
     },
@@ -94,7 +100,7 @@
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_pistol_grip"
+      "mod_muzzle"
     ],
     "addtoStaticLootContainers": true,
     "StaticLootContainers": [

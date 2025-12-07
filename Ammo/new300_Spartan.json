@@ -12,7 +12,7 @@
 	  "CanSellOnRagfair": false,
       "Damage": 57,
       "HeavyBleedingDelta": 0.1,
-      "InitialSpeed": 884,
+      "InitialSpeed": 902,
       "LightBleedingDelta": 0.15,
       "MalfFeedChance": 0.09,
       "MalfMisfireChance": 0.175,
@@ -21,7 +21,7 @@
       "MisfireChance": 0.01,
       "PenetrationChanceObstacle": 0.34,
       "PenetrationDamageMod": 0.125,
-      "PenetrationPower": 51,
+      "PenetrationPower": 54,
       "RicochetChance": 0.3,
       "Tracer": true,
       "TracerColor": "red"

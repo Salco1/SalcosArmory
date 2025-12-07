@@ -18,7 +18,7 @@
         "description": "Muscular Ultra Large Exciter. It is used to expand the body's abilities before long marches. Developed by ODIN and Sanitar."
       }
     },
-    "fleaPriceRoubles": 0,
+    "fleaPriceRoubles": 86544,
     "handbookPriceRoubles": 72555,
     "addtoBots": true,
     "addtoModSlots": true,
@@ -26,39 +26,39 @@
     "StaticLootContainers": [
       {
         "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDCASE",
-        "Probability": 3400
+        "Probability": 3800
       },
       {
         "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
-        "Probability": 3400
+        "Probability": 3800
       }
     ],
     "addtoTraders": false
