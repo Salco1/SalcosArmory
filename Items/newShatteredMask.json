@@ -4,7 +4,7 @@
     "parentId": "5a341c4686f77469e155819e",
     "handbookParentId": "5b47574386f77428ca22b32f",
     "overrideProperties": {
-	  "armorClass": 6,
+      "armorClass": 6,
       "BackgroundColor": "violet",
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
@@ -25,43 +25,43 @@
     "handbookPriceRoubles": 330500,
     "addtoBots": true,
     "addtoModSlots": true,
-    "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtostaticLootContainers": true,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DUFFLE_BAG"
       },
       {
-        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DUFFLE_BAG_ADV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY"
       },
       {
-        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_MEDBAG_SMU06"
       },
       {
-        "ContainerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_MEDCASE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_MEDCASE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE"
       }
     ],
     "addtoTraders": false

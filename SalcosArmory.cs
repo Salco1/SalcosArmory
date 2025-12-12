@@ -39,15 +39,24 @@ public sealed class SalcosArmoryMod(
     {
         var assembly = Assembly.GetExecutingAssembly();
 
-        await wttCommon.CustomItemServiceExtended.CreateCustomItems(assembly, Path.Join("Weapons"));
-        await wttCommon.CustomItemServiceExtended.CreateCustomItems(assembly, Path.Join("Ammo"));
-        await wttCommon.CustomItemServiceExtended.CreateCustomItems(assembly, Path.Join("Attachments"));
-        await wttCommon.CustomItemServiceExtended.CreateCustomItems(assembly, Path.Join("Items"));
+        var itemFolders = new[]
+        {
+            "Weapons",
+            "Ammo",
+            "Attachments",
+            "Items"
+        };
+
+        foreach (var folder in itemFolders)
+        {
+            await wttCommon.CustomItemServiceExtended.CreateCustomItems(assembly, Path.Join(folder));
+        }
 
         await wttCommon.CustomHideoutRecipeService.CreateHideoutRecipes(assembly, Path.Join("Recipes"));
 
         SalcosCompat.Apply(databaseService, assembly, logger);
 
-        logger.LogInformation("[SALCO's Armory loaded successfully]");
+        // This line will appear every time the mod has finished loading
+        logger.LogInformation("[SALCO'S ARMORY successfully loaded]");
     }
 }

@@ -10,8 +10,8 @@
 
   <ItemGroup>
     <!-- Core SPT server library -->
-    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.6" />
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.7" />
     <!-- WTT server library; if your existing projects use a different package ID or version, match that setup -->
-    <PackageReference Include="WTT-ServerCommonLib" Version="2.0.5" />
+    <PackageReference Include="WTT-ServerCommonLib" Version="2.0.7" />
   </ItemGroup>
 </Project>

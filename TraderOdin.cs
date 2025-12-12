@@ -1,7 +1,6 @@
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Nodes;
-using Microsoft.Extensions.Logging;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Helpers;
@@ -21,8 +20,7 @@ public sealed class TraderOdin(
     ImageRouter imageRouter,
     ConfigServer configServer,
     TimeUtil timeUtil,
-    AddCustomTraderHelper addCustomTraderHelper,
-    ILogger<TraderOdin> logger
+    AddCustomTraderHelper addCustomTraderHelper
 ) : IOnLoad
 {
     private readonly TraderConfig _traderConfig = configServer.GetConfig<TraderConfig>();
@@ -38,10 +36,20 @@ public sealed class TraderOdin(
 
         imageRouter.AddRoute(traderBase.Avatar.Replace(".png", string.Empty), traderImagePath);
 
-        addCustomTraderHelper.SetTraderUpdateTime(_traderConfig, traderBase, timeUtil.GetHoursAsSeconds(1), timeUtil.GetHoursAsSeconds(2));
+        addCustomTraderHelper.SetTraderUpdateTime(
+            _traderConfig,
+            traderBase,
+            timeUtil.GetHoursAsSeconds(1),
+            timeUtil.GetHoursAsSeconds(2)
+        );
+
         _ragfairConfig.Traders.TryAdd(traderBase.Id, true);
         addCustomTraderHelper.AddTraderWithEmptyAssortToDb(traderBase);
-        addCustomTraderHelper.AddTraderToLocales(traderBase, "Odin", "He is a former KSK elite soldier of the German Federal Armed Forces. He lost his right eye in combat, after which he was nicknamed Odin. His real name, origin, and age are unknown. He is an incredibly skilled marksman and weapons specialist. He is also an excellent gunsmith. He is more or less neutral towards all factions in Tarkov, but maintains a particularly good relationship with Mechanic, Prapor, and Sanitar.");
+        addCustomTraderHelper.AddTraderToLocales(
+            traderBase,
+            "Odin",
+            "He is a former KSK elite soldier of the German Federal Armed Forces. He lost his right eye in combat, after which he was nicknamed Odin. His real name, origin, and age are unknown. He is an incredibly skilled marksman and weapons specialist. He is also an excellent gunsmith. He is more or less neutral towards all factions in Tarkov, but maintains a particularly good relationship with Mechanic, Prapor, and Sanitar."
+        );
 
         var baseAssort = new JsonObject
         {
@@ -66,10 +74,10 @@ public sealed class TraderOdin(
         }
         catch
         {
+            // intentionally ignored – temporary file cleanup failure is non-fatal
         }
 
         addCustomTraderHelper.OverwriteTraderAssort(traderBase.Id, assort);
-
 
         return Task.CompletedTask;
     }

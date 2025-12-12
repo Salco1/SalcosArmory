@@ -1,35 +1,54 @@
 {
-  "6919bcc51791eac836e054c8": {
-    "itemTplToClone": "55d482194bdc2d1d4e8b456b",
+  "693c0e1d696dda283b929463": {
+    "itemTplToClone": "5c0548ae0db834001966a3c2",
     "parentId": "5448bc234bdc2d3c308b4569",
     "handbookParentId": "5b5f754a86f774094242f19b",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "Ergonomics": -8,
+      "Ergonomics": -2,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "CheckTimeModifier": 10,
-      "RarityPvE": "Rare",
-      "LoadUnloadModifier": 12,
-      "MalfunctionChance": 0.023
+      "Cartridges": [
+        {
+          "_id": "693c0ef5309270d2ff045040",
+          "_max_count": 30,
+          "_name": "cartridges",
+          "_parent": "693c0e1d696dda283b929463",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5c0d688c86f77413ae3407b2",
+                  "61962d879bb3d20b0946d385",
+                  "57a0dfb82459774d3078b56c",
+                  "57a0e5022459774d1673f889",
+                  "5c0d668f86f7747ccb7f13b2",
+                  "6576f96220d53a5b8f3e395e",
+				  "693c213c6f5d597989d8437f"
+                ]
+              }
+            ]
+          },
+          "_proto": "5748538b2459770af276a261"
+        }
+      ]
     },
     "locales": {
       "en": {
-        "name": "AK 6L31 60-round 5.45x39 magazine - #Rev. 2",
-        "shortName": "6L31 Rev.2",
-        "description": "A further improved version of the Izhmash-manufactured 60-round 6L31. Improved by ODIN."
+        "name": "9x39mm SLR-106 30-Round magazine for the AK-939",
+        "shortName": "939AK",
+        "description": "Reforged by ODIN."
       }
     },
-    "fleaPriceRoubles": 72654,
-    "handbookPriceRoubles": 63942,
+    "fleaPriceRoubles": 31557,
+    "handbookPriceRoubles": 2400,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
       "mod_magazine"
     ],
-    "addtoStaticLootContainers": true,
-    "addtoTraders": false,
+    "addtostaticLootContainers": true,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
@@ -52,6 +71,10 @@
         "probability": 4350
       },
       {
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "probability": 4350
+      },
+      {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
         "probability": 4350
       },
@@ -63,6 +86,7 @@
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
         "probability": 4350
       }
-    ]
+    ],
+    "addtoTraders": false
   }
 }

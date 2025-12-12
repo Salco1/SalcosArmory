@@ -6,7 +6,7 @@
     "overrideProperties": {
       "ammoCaliber": "Caliber762x51",
       "BackgroundColor": "violet",
-	  "bFirerate": 670,
+      "bFirerate": 670,
       "Chambers": [
         {
           "_name": "patron_in_weapon",
@@ -47,7 +47,7 @@
                   "59d64ec286f774171d1e0a42",
                   "59e649f986f77411d949b246",
                   "59ccfdba86f7747f2109a587",
-				  "6934988fd675e60e80e81c07"
+                  "6934988fd675e60e80e81c07"
                 ],
                 "Shift": 0
               }
@@ -206,7 +206,7 @@
                   "6386300124a1dc425c00577a",
                   "649ec87d8007560a9001ab36",
                   "6761779c48fa5c377e06fc3f",
-				  "6087e2a5232e5a31c233d552"
+                  "6087e2a5232e5a31c233d552"
                 ],
                 "Shift": 0
               }
@@ -231,7 +231,7 @@
                   "65293c7a17e14363030ad308",
                   "5a3501acc4a282000d72293a",
                   "6761770e48fa5c377e06fc3c",
-				  "693092a9caf646a08a952ca2"
+                  "693092a9caf646a08a952ca2"
                 ]
               }
             ]
@@ -309,52 +309,52 @@
     "addtoBots": true,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_DEAD_SCAV",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "probability": 4500
       }
-    ],
-    "addtoTraders": false
+    ]
   }
 }

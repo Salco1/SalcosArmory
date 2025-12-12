@@ -26,41 +26,41 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   },
   "691609d4fce711a9ac0d3869": {
     "enabled": true,
@@ -89,41 +89,41 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   },
   "691609cd9171e6444c49e7ab": {
     "enabled": true,
@@ -152,41 +152,41 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   },
   "691609ca9fb47c1d9e9b3a9f": {
     "enabled": true,
@@ -215,41 +215,41 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   },
   "691609c6fe545167aefbb8cd": {
     "enabled": true,
@@ -278,41 +278,41 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   },
   "691609c1c58ce6e096464374": {
     "enabled": true,
@@ -341,41 +341,41 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   },
   "691609bc7ba77ce7c25e251e": {
     "enabled": true,
@@ -404,41 +404,41 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   },
   "691609b9af9542202d0489dc": {
     "enabled": true,
@@ -467,40 +467,40 @@
     "addtoBots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 3000
+        "probability": 3000,
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2"
       }
-    ],
-    "addtoTraders": false
+    ]
   }
 }

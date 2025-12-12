@@ -1,18 +1,46 @@
 {
-  "691920dce795053d025d63db": {
-    "itemTplToClone": "5ac66d9b5acfc4001633997a",
+  "693c0c5821ca1bf9c48941c7": {
+    "itemTplToClone": "5ac66d015acfc400180ae6e4",
     "parentId": "5447b5f14bdc2d61278b4567",
     "handbookParentId": "5b5f78fc86f77409407a7f90",
     "overrideProperties": {
+	  "ammoCaliber": "Caliber9x39",
       "BackgroundColor": "violet",
+	  "defAmmo": "5c0d688c86f77413ae3407b2",
+      "defMagType": "693c0e1d696dda283b929463",
       "bFirerate": 720,
       "CanSellOnRagfair": true,
       "CanRequireOnRagfair": true,
+	  "Chambers": [
+        {
+          "_name": "patron_in_weapon",
+          "_id": "5fbcc1d9016cce60e8341aba",
+          "_parent": "6930b285f7f13803e87565d7",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5c0d688c86f77413ae3407b2",
+                  "61962d879bb3d20b0946d385",
+                  "57a0dfb82459774d3078b56c",
+                  "57a0e5022459774d1673f889",
+                  "5c0d668f86f7747ccb7f13b2",
+                  "6576f96220d53a5b8f3e395e",
+				  "693c213c6f5d597989d8437f"
+                ]
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d4af244bdc2d962f8b4571"
+        }
+      ],
       "Slots": [
         {
           "_name": "mod_gas_block",
-          "_id": "5ac66d9b5acfc4001633997d",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c105e246d09d138e5d8d8",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -32,8 +60,8 @@
         },
         {
           "_name": "mod_launcher",
-          "_id": "5ac66d9b5acfc4001633997e",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fac76dca3d278363992",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -48,8 +76,8 @@
         },
         {
           "_name": "mod_muzzle",
-          "_id": "5ac66d9b5acfc4001633997f",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fb133f6844250a9a120",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -79,8 +107,8 @@
         },
         {
           "_name": "mod_pistol_grip",
-          "_id": "5ac66d9b5acfc40016339980",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fb99fe383fb770f8acb",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -121,8 +149,8 @@
         },
         {
           "_name": "mod_reciever",
-          "_id": "5ac66d9b5acfc40016339981",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fb99fe383fb770f8acb",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -145,8 +173,8 @@
         },
         {
           "_name": "mod_sight_rear",
-          "_id": "5ac66d9b5acfc40016339982",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fc55af6af33f0b61f20",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -169,8 +197,8 @@
         },
         {
           "_name": "mod_stock",
-          "_id": "5ac66d9b5acfc40016339983",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fcc2df533eb164243fb",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -194,25 +222,14 @@
         },
         {
           "_name": "mod_magazine",
-          "_id": "5ac66d9b5acfc40016339984",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fd4dd176d13ba7f9eea",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
                 "AnimationIndex": -1,
                 "Filter": [
-                  "564ca9df4bdc2d35148b4569",
-                  "564ca99c4bdc2d16268b4589",
-                  "55d480c04bdc2d1d4e8b456a",
-                  "5cbdaf89ae9215000e5b9c94",
-                  "55d481904bdc2d8c2f8b456a",
-                  "55d482194bdc2d1d4e8b456b",
-                  "55d4837c4bdc2d1d4e8b456c",
-                  "5aaa4194e5b5b055d06310a5",
-                  "5bed61680db834001d2c45ab",
-                  "5bed625c0db834001c062946",
-                  "649ec30cb013f04a700e60fb",
-                  "64b9e265c94d0d15c5027e35"
+                  "693c0e1d696dda283b929463"
                 ]
               }
             ]
@@ -223,8 +240,8 @@
         },
         {
           "_name": "mod_mount_000",
-          "_id": "5ac66d9b5acfc40016339985",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fdbc42323d6e28cd7ee",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -259,8 +276,8 @@
         },
         {
           "_name": "mod_charge",
-          "_id": "5ac66d9b5acfc40016339986",
-          "_parent": "691920dce795053d025d63db",
+          "_id": "693c0fe376f798e848e87c60",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -280,13 +297,13 @@
     },
     "locales": {
       "en": {
-        "name": "Kalashnikov AK-105 5.45x39 assault rifle - #Rev. 2",
-        "shortName": "AK-105R2",
-        "description": "A modified variant of the Kalashnikov AK-105. Modified by ODIN."
+        "name": "Kalashnikov AK-939 9x39mm assault rifle",
+        "shortName": "AK-939",
+        "description": "A modified variant of the Kalashnikov AK-102 chambered in 9x39mm. Modified by ODIN."
       }
     },
-    "fleaPriceRoubles": 50000,
-    "handbookPriceRoubles": 30862,
+    "fleaPriceRoubles": 69855,
+    "handbookPriceRoubles": 51648,
     "addtoBots": true,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,

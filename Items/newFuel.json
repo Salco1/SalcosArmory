@@ -7,9 +7,9 @@
       "BackgroundColor": "violet",
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-	  "RarityPvE": "Rare",
-	  "MaxResource": 300,
-	  "Resource": 300
+      "RarityPvE": "Rare",
+      "MaxResource": 300,
+      "Resource": 300
     },
     "locales": {
       "en": {
@@ -23,48 +23,48 @@
     "addtoBots": false,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,
-	"addtoGeneratorAsFuel": true,
-	"generatorFuelSlotStages": [
+    "addtoGeneratorAsFuel": true,
+    "generatorFuelSlotStages": [
       "1"
     ],
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_AIRDROP_COMMON_SUPPLY_CRATE",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_AIRDROP_COMMON_SUPPLY_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_DUFFLE_BAG"
       },
       {
-        "ContainerName": "LOOTCONTAINER_DUFFLE_BAG_ADV",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_DUFFLE_BAG_ADV"
       },
       {
-        "ContainerName": "LOOTCONTAINER_AIRDROP_SUPPLY_CRATE",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_AIRDROP_SUPPLY_CRATE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_AIRDROP_SUPPLY_CRATE_2",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_AIRDROP_SUPPLY_CRATE_2"
       },
       {
-        "ContainerName": "LOOTCONTAINER_AIRDROP_TECHNICAL_SUPPLY_CRATE_EVENT_1",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_AIRDROP_TECHNICAL_SUPPLY_CRATE_EVENT_1"
       },
       {
-        "ContainerName": "LOOTCONTAINER_BURIED_BARREL_CACHE",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_BURIED_BARREL_CACHE"
       },
       {
-        "ContainerName": "LOOTCONTAINER_TECHNICAL_SUPPLY_CRATE",
-        "Probability": 3800
+        "probability": 3800,
+        "containerName": "LOOTCONTAINER_TECHNICAL_SUPPLY_CRATE"
       }
-    ],
-    "addtoTraders": false
+    ]
   }
 }

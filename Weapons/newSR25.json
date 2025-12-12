@@ -26,52 +26,52 @@
     "addtoBots": true,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,
-    "StaticLootContainers": [
+    "addtoTraders": false,
+    "staticLootContainers": [
       {
-        "ContainerName": "LOOTCONTAINER_DEAD_SCAV",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_DEAD_SCAV",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE",
+        "probability": 4500
       },
       {
-        "ContainerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "Probability": 4500
+        "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
+        "probability": 4500
       }
-    ],
-    "addtoTraders": false
+    ]
   }
 }
