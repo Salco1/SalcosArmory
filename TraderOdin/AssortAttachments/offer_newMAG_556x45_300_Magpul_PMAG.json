@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "_id": "6919bcc51791eac836e054c8",
-      "_tpl": "6919bcc51791eac836e054c8",
+      "_id": "693eaa5b4015878f9ce091fc",
+      "_tpl": "693eaa5b4015878f9ce091fc",
       "parentId": "hideout",
       "slotId": "hideout",
       "upd": {
@@ -14,7 +14,7 @@
     }
   ],
   "barter_scheme": {
-    "6919bcc51791eac836e054c8": [
+    "693eaa5b4015878f9ce091fc": [
       [
         {
           "count": 45500,
@@ -24,6 +24,6 @@
     ]
   },
   "loyal_level_items": {
-    "6919bcc51791eac836e054c8": 1
+    "693eaa5b4015878f9ce091fc": 1
   }
 }

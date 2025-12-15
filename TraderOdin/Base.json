@@ -10,7 +10,7 @@
   "customization_seller": false,
   "discount": 0,
   "discount_end": 0,
-  "gridHeight": 280,
+  "gridHeight": 350,
   "insurance": {
     "availability": false,
     "excluded_category": [],
@@ -52,7 +52,7 @@
   "location": "Ground Zero",
   "loyaltyLevels": [
     {
-      "buy_price_coef": 45,
+      "buy_price_coef": 44,
       "exchange_price_coef": 0,
       "heal_price_coef": 0,
       "insurance_price_coef": 10,
