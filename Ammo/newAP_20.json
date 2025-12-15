@@ -32,7 +32,7 @@
       "en": {
         "name": "12/70 AP-20 armor-piercing slug - #Rev 2",
         "shortName": "AP-20 R2",
-        "description": "A modified version of the regular AP-20. Modified by ODIN."
+        "description": "An advanced version of the regular AP-20 round, modified by ODIN."
       }
     },
     "fleaPriceRoubles": 1050,
@@ -40,69 +40,69 @@
     "addtoBots": true,
     "addCaliberToAllCloneLocations": true,
     "addtoStaticAmmo": true,
-    "staticAmmoProbability": 320,
+    "staticAmmoProbability": 1234,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_BURIED_BARREL_CACHE",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_CIVILIAN_BODY",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV_4X4_2",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_PMC_BODY",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_SCAV_BODY",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 3600
+        "probability": 2045
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 3600
+        "probability": 2045
       }
     ],
     "addtoTraders": false

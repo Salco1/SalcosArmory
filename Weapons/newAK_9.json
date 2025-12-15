@@ -1,29 +1,32 @@
 {
-  "690d110b146500ecaf09e40d": {
-    "itemTplToClone": "6499849fc93611967b034949",
+  "693c0c5821ca1bf9c48941c7": {
+    "itemTplToClone": "5ac66d015acfc400180ae6e4",
     "parentId": "5447b5f14bdc2d61278b4567",
     "handbookParentId": "5b5f78fc86f77409407a7f90",
     "overrideProperties": {
-      "ammoCaliber": "Caliber762x51",
+	  "ammoCaliber": "Caliber9x39",
       "BackgroundColor": "violet",
-      "Chambers": [
+	  "defAmmo": "5c0d688c86f77413ae3407b2",
+      "defMagType": "693c0e1d696dda283b929463",
+      "bFirerate": 750,
+      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": true,
+	  "Chambers": [
         {
           "_name": "patron_in_weapon",
-          "_id": "6499849fc93611967b03494a",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "5fbcc1d9016cce60e8341aba",
+          "_parent": "6930b285f7f13803e87565d7",
           "_props": {
             "filters": [
               {
                 "Filter": [
-                  "5a6086ea4f39f99cd479502f",
-                  "5a608bf24f39f98ffc77720e",
-                  "58dd3ad986f77403051cba8f",
-                  "5e023e53d4353e3302577c4c",
-                  "5efb0c1bd79ff02a1f5e68d9",
-                  "5e023e6e34d52a55c3304f71",
-                  "5e023e88277cce2b522ff2b1",
-                  "6768c25aa7b238f14a08d3f6",
-                  "6908d6631852f73ea7b7946a"
+                  "5c0d688c86f77413ae3407b2",
+                  "61962d879bb3d20b0946d385",
+                  "57a0dfb82459774d3078b56c",
+                  "57a0e5022459774d1673f889",
+                  "5c0d668f86f7747ccb7f13b2",
+                  "6576f96220d53a5b8f3e395e",
+				  "693c213c6f5d597989d8437f"
                 ]
               }
             ]
@@ -36,14 +39,16 @@
       "Slots": [
         {
           "_name": "mod_gas_block",
-          "_id": "6499849fc93611967b03494b",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "693c105e246d09d138e5d8d8",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
                 "Filter": [
-                  "649ec107961514b22506b10c",
-                  "6934988fd675e60e80e81c07"
+                  "59c6633186f7740cf0493bb9",
+                  "59d64ec286f774171d1e0a42",
+                  "59e649f986f77411d949b246",
+                  "59ccfdba86f7747f2109a587"
                 ],
                 "Shift": 0
               }
@@ -55,15 +60,12 @@
         },
         {
           "_name": "mod_launcher",
-          "_id": "6499849fc93611967b03494c",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "693c0fac76dca3d278363992",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
-                "Filter": [
-                  "5648b62b4bdc2d9d488b4585",
-                  "62e7e7bbe6da9612f743f1e0"
-                ],
+                "Filter": [],
                 "Shift": 0
               }
             ]
@@ -74,14 +76,12 @@
         },
         {
           "_name": "mod_muzzle",
-          "_id": "6499849fc93611967b03494d",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "693c0fb133f6844250a9a120",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
                 "Filter": [
-                  "649ec2af961514b22506b10f",
-                  "64c196ad26a15b84aa07132f",
                   "5ac72e945acfc43f3b691116",
                   "5ac7655e5acfc40016339a19",
                   "5649aa744bdc2ded0b8b457e",
@@ -107,15 +107,14 @@
         },
         {
           "_name": "mod_pistol_grip",
-          "_id": "6499849fc93611967b03494e",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "693c0fb99fe383fb770f8acb",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
                 "Filter": [
                   "5f6341043ada5942720e2dc5",
                   "6087e663132d4d12c81fd96b",
-                  "623c3be0484b5003161840dc",
                   "5beec8ea0db834001a6f9dbf",
                   "5649ad3f4bdc2df8348b4585",
                   "5649ade84bdc2d1b2b8b4587",
@@ -128,13 +127,14 @@
                   "59e6318286f77444dd62c4cc",
                   "5cf50850d7f00c056e24104c",
                   "5cf508bfd7f00c056e24104e",
-                  "628a664bccaab13006640e47",
-                  "628c9ab845c59e5b80768a81",
                   "5947f92f86f77427344a76b1",
                   "5947fa2486f77425b47c1a9b",
                   "5c6bf4aa2e2216001219b0ae",
                   "5649ae4a4bdc2d1b2b8b4588",
                   "5998517986f7746017232f7e",
+                  "623c3be0484b5003161840dc",
+                  "628a664bccaab13006640e47",
+                  "628c9ab845c59e5b80768a81",
                   "63f4da90f31d4a33b87bd054",
                   "648ae3e356c6310a830fc291",
                   "651580dc71a4f10aec4b6056"
@@ -149,14 +149,19 @@
         },
         {
           "_name": "mod_reciever",
-          "_id": "6499849fc93611967b03494f",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "693c0fb99fe383fb770f8acb",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
                 "Filter": [
-                  "649ec2f3961514b22506b111",
-                  "5649af094bdc2df8348b4586"
+                  "5649af094bdc2df8348b4586",
+                  "5ac50da15acfc4001718d287",
+                  "5d2c76ed48f03532f2136169",
+                  "5d2c770c48f0354b4a07c100",
+                  "5d2c772c48f0355d95672c25",
+                  "5649af884bdc2d1b2b8b4589",
+                  "628a665a86cbd9750d2ff5e5"
                 ],
                 "Shift": 0
               }
@@ -167,15 +172,40 @@
           "_proto": "55d30c4c4bdc2db4468b457e"
         },
         {
-          "_name": "mod_stock_001",
-          "_id": "6499849fc93611967b034951",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_name": "mod_sight_rear",
+          "_id": "693c0fc55af6af33f0b61f20",
+          "_parent": "693c0c5821ca1bf9c48941c7",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5ac733a45acfc400192630e2",
+                  "5649b0544bdc2d1b2b8b458a",
+                  "5ac72e475acfc400180ae6fe",
+                  "5649d9a14bdc2d79388b4580",
+                  "628a7b23b0f75035732dd565",
+                  "649ec2cec93611967b03495e",
+                  "5bf3f59f0db834001a6fa060"
+                ],
+                "Shift": 0
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        },
+        {
+          "_name": "mod_stock",
+          "_id": "693c0fcc2df533eb164243fb",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
                 "Filter": [
                   "5ac50c185acfc400163398d4",
                   "5cf50fc5d7f00c056c53f83c",
+                  "5ac78eaf5acfc4001926317a",
                   "5beec8b20db834001961942a",
                   "6386300124a1dc425c00577a",
                   "649ec87d8007560a9001ab36",
@@ -192,19 +222,14 @@
         },
         {
           "_name": "mod_magazine",
-          "_id": "6499849fc93611967b034952",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "693c0fd4dd176d13ba7f9eea",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
                 "AnimationIndex": -1,
                 "Filter": [
-                  "5df8f535bb49d91fb446d6b0",
-                  "5df8f541c41b2312ea3335e3",
-                  "65293c38fc460e50a509cb25",
-                  "65293c7a17e14363030ad308",
-                  "5a3501acc4a282000d72293a",
-                  "6761770e48fa5c377e06fc3c"
+                  "693c0e1d696dda283b929463"
                 ]
               }
             ]
@@ -214,9 +239,45 @@
           "_proto": "55d30c394bdc2dae468b4577"
         },
         {
+          "_name": "mod_mount_000",
+          "_id": "693c0fdbc42323d6e28cd7ee",
+          "_parent": "693c0c5821ca1bf9c48941c7",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5947db3f86f77447880cf76f",
+                  "6113d6c3290d254f5e6b27db",
+                  "57486e672459770abd687134",
+                  "618a5d5852ecee1505530b2a",
+                  "5c82342f2e221644f31c060e",
+                  "576fd4ec2459777f0b518431",
+                  "5c82343a2e221644f31c0611",
+                  "5cf638cbd7f00c06595bc936",
+                  "5a7c74b3e899ef0014332c29",
+                  "591ee00d86f774592f7b841e",
+                  "5d0a29ead7ad1a0026013f27",
+                  "618a75c9a3884f56c957ca1b",
+                  "57acb6222459771ec34b5cb0",
+                  "5c61a40d2e2216001403158d",
+                  "5c90c3622e221601da359851",
+                  "638db77630c4240f9e06f8b6",
+                  "63d114019e35b334d82302f7",
+                  "6544d4187c5457729210d277",
+                  "65f1b1176dbd6c5ba2082eed"
+                ],
+                "Shift": 0
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        },
+        {
           "_name": "mod_charge",
-          "_id": "6499849fc93611967b034954",
-          "_parent": "690d110b146500ecaf09e40d",
+          "_id": "693c0fe376f798e848e87c60",
+          "_parent": "693c0c5821ca1bf9c48941c7",
           "_props": {
             "filters": [
               {
@@ -231,36 +292,18 @@
           "_required": false,
           "_mergeSlotWithChildren": false,
           "_proto": "55d30c4c4bdc2db4468b457e"
-        },
-        {
-          "_name": "mod_handguard",
-          "_id": "649ed407b013f04a700e60fe",
-          "_parent": "690d110b146500ecaf09e40d",
-          "_props": {
-            "filters": [
-              {
-                "Filter": [
-                  "649ec127c93611967b034957"
-                ],
-                "Shift": 0
-              }
-            ]
-          },
-          "_required": false,
-          "_mergeSlotWithChildren": false,
-          "_proto": "55d30c4c4bdc2db4468b457e"
         }
       ]
     },
     "locales": {
       "en": {
-        "name": "Kalashnikov AK-308 7.62x51 assault rifle",
-        "shortName": "AK-308",
-        "description": "The AK-308 is a battle rifle that was first introduced in 2018 upon request of potential international clients outside Russia. It is based on the AK-15's design and is chambered in 7.62×51mm NATO."
+        "name": "Kalashnikov AK-9 9x39mm assault rifle",
+        "shortName": "AK-939",
+        "description": "The AK-9 is a Russian 9×39mm compact rifle. Its development began when Izhevsk Machine-Building Plant (Izhmash), now known as Kalashnikov Concern started working on a new silent, flame-less, compact AK rifle in the early 2000s."
       }
     },
-    "fleaPriceRoubles": 60000,
-    "handbookPriceRoubles": 46511,
+    "fleaPriceRoubles": 69855,
+    "handbookPriceRoubles": 51648,
     "addtoBots": true,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,
@@ -268,6 +311,10 @@
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
+        "probability": 1970
+      },
+      {
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
         "probability": 1970
       },
       {

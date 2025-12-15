@@ -1,72 +1,70 @@
 {
-  "691377baadf5cb5a56222014": {
-    "itemTplToClone": "5ea172e498dacb342978818e",
-    "parentId": "550aa4bf4bdc2dd6348b456b",
-    "handbookParentId": "5b5f724c86f774093f2ecf15",
+  "6932f43c4d4baeb2d28feadf": {
+    "itemTplToClone": "67716a6fd639fc1f46654118",
+    "parentId": "550aa4cd4bdc2dd8348b456c",
+    "handbookParentId": "5b5f731a86f774093e6cb4f9",
     "overrideProperties": {
-      "Accuracy": 3,
+      "Accuracy": 1,
       "BackgroundColor": "violet",
-      "DurabilityBurnModificator": 1.05,
-      "Ergonomics": -1.5,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "RarityPvE": "Rare",
-      "Recoil": -7
+      "DurabilityBurnModificator": 1.69,
+      "Ergonomics": -11,
+      "HeatFactor": 1.19,
+      "Loudness": -76,
+      "RarityPvE": "Superrare",
+      "Recoil": -14
     },
     "locales": {
       "en": {
-        "name": "AR-15 SureFire SF4P 5.56x45 flash hider - #Rev. 2",
-        "shortName": "SF4P R2",
-        "description": "Enhanced by ODIN."
+        "name": "Echoes Defense Strikewrap 46 Multi-Caliber sound suppressor #clone",
+        "shortName": "Strikewrap",
+        "description": "Reforged by ODIN."
       }
     },
-    "fleaPriceRoubles": 33211,
-    "handbookPriceRoubles": 16544,
+    "fleaPriceRoubles": 72654,
+    "handbookPriceRoubles": 63942,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
       "mod_muzzle"
     ],
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
+    "addtoTraders": false,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 4350
+        "probability": 3450
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 4350
+        "probability": 3450
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 4350
+        "probability": 3450
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 4350
+        "probability": 3450
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 4350
-      },
-      {
-        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 4350
+        "probability": 3450
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 4350
+        "probability": 3450
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 4350
+        "probability": 3450
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 4350
+        "probability": 3450
       }
-    ],
-    "addtoTraders": false
+    ]
   }
 }

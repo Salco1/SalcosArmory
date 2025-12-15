@@ -1,31 +1,30 @@
 {
-  "69138b25672be00a9f74eef0": {
-    "itemTplToClone": "5cf50850d7f00c056e24104c",
-    "parentId": "55818a684bdc2ddd698b456d",
-    "handbookParentId": "5b5f761f86f774094242f1a1",
+  "69400cff349306c575b49325": {
+    "itemTplToClone": "6516e91f609aaf354b34b3e2",
+    "parentId": "55818a594bdc2db9688b456a",
+    "handbookParentId": "5b5f757486f774093e6cb507",
     "overrideProperties": {
-      "Accuracy": 0.5,
+      "Accuracy": 1.5,
       "BackgroundColor": "violet",
-      "Ergonomics": 14,
+      "Ergonomics": 6,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Recoil": -0.5,
-      "RarityPvE": "Rare"
+      "Recoil": -21
     },
     "locales": {
       "en": {
-        "name": "AK Strike Industries Enhanced Pistol Grip (Black) - #Rev. 2",
-        "shortName": "AKEPG R2",
+        "name": "AR-15 Daniel Defense Enhanced Collapsible Buttstock (Black) - #Rev. 2",
+        "shortName": "DD ECB R2",
         "description": "Enhanced by ODIN."
       }
     },
-    "fleaPriceRoubles": 38544,
-    "handbookPriceRoubles": 17775,
+    "fleaPriceRoubles": 91548,
+    "handbookPriceRoubles": 8719,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_pistol_grip"
+      "mod_stock_000"
     ],
     "addtostaticLootContainers": true,
     "staticLootContainers": [
@@ -68,33 +67,32 @@
     ],
     "addtoTraders": false
   },
-  "69138b1e01e5b709ab3a47b8": {
-    "itemTplToClone": "5cf508bfd7f00c056e24104e",
-    "parentId": "55818a684bdc2ddd698b456d",
-    "handbookParentId": "5b5f761f86f774094242f1a1",
+  "69400eafb59d1033c84ab1d2": {
+    "itemTplToClone": "6516e971a3d4c6497930b450",
+    "parentId": "55818a594bdc2db9688b456a",
+    "handbookParentId": "5b5f757486f774093e6cb507",
     "overrideProperties": {
-      "Accuracy": 0.5,
+      "Accuracy": 1.5,
       "BackgroundColor": "violet",
-      "Ergonomics": 14,
+      "Ergonomics": 6,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Recoil": -0.5,
-      "RarityPvE": "Rare"
+      "Recoil": 21
     },
     "locales": {
       "en": {
-        "name": "AK Strike Industries Enhanced Pistol Grip (FDE) - #Rev. 2",
-        "shortName": "AKEPG R2",
+        "name": "AR-15 Daniel Defense Enhanced Collapsible Buttstock (FDE) - #Rev. 2",
+        "shortName": "DD ECB R2",
         "description": "Enhanced by ODIN."
       }
     },
-    "fleaPriceRoubles": 38544,
-    "handbookPriceRoubles": 17775,
+    "fleaPriceRoubles": 78566,
+    "handbookPriceRoubles": 6175,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_pistol_grip"
+      "mod_stock_000"
     ],
     "addtostaticLootContainers": true,
     "staticLootContainers": [

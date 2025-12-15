@@ -20,7 +20,7 @@
       "en": {
         "name": "SureFire SOCOM556-MONSTER 5.56x45 sound suppressor - #Rev. 2",
         "shortName": "556MNSTR R2",
-        "description": "Reforged by ODIN."
+        "description": "Enhanced by ODIN."
       }
     },
     "fleaPriceRoubles": 77455,
@@ -90,7 +90,7 @@
     },
     "locales": {
       "en": {
-        "name": "SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor Rev. 2",
+        "name": "SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor - #Rev. 2",
         "shortName": "MNSTRm R2",
         "description": "Reforged by ODIN."
       }

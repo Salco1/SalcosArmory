@@ -42,7 +42,7 @@
     "addtoBots": true,
     "addCaliberToAllCloneLocations": true,
     "addtoStaticAmmo": true,
-    "staticAmmoProbability": 320,
+    "staticAmmoProbability": 2655,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
     "staticLootContainers": [

@@ -1,32 +1,52 @@
 {
-  "691377baadf5cb5a56222014": {
-    "itemTplToClone": "5ea172e498dacb342978818e",
-    "parentId": "550aa4bf4bdc2dd6348b456b",
-    "handbookParentId": "5b5f724c86f774093f2ecf15",
+  "693c0e1d696dda283b929463": {
+    "itemTplToClone": "5c0548ae0db834001966a3c2",
+    "parentId": "5448bc234bdc2d3c308b4569",
+    "handbookParentId": "5b5f754a86f774094242f19b",
     "overrideProperties": {
-      "Accuracy": 3,
       "BackgroundColor": "violet",
-      "DurabilityBurnModificator": 1.05,
-      "Ergonomics": -1.5,
+      "Ergonomics": -2,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "RarityPvE": "Rare",
-      "Recoil": -7
+      "Cartridges": [
+        {
+          "_id": "693c0ef5309270d2ff045040",
+          "_max_count": 30,
+          "_name": "cartridges",
+          "_parent": "693c0e1d696dda283b929463",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5c0d688c86f77413ae3407b2",
+                  "61962d879bb3d20b0946d385",
+                  "57a0dfb82459774d3078b56c",
+                  "57a0e5022459774d1673f889",
+                  "5c0d668f86f7747ccb7f13b2",
+                  "6576f96220d53a5b8f3e395e",
+				  "693c213c6f5d597989d8437f"
+                ]
+              }
+            ]
+          },
+          "_proto": "5748538b2459770af276a261"
+        }
+      ]
     },
     "locales": {
       "en": {
-        "name": "AR-15 SureFire SF4P 5.56x45 flash hider - #Rev. 2",
-        "shortName": "SF4P R2",
+        "name": "9x39mm SLR-106 30-Round magazine for the AK-9",
+        "shortName": "AK9",
         "description": "Enhanced by ODIN."
       }
     },
-    "fleaPriceRoubles": 33211,
-    "handbookPriceRoubles": 16544,
+    "fleaPriceRoubles": 31557,
+    "handbookPriceRoubles": 2400,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_muzzle"
+      "mod_magazine"
     ],
     "addtostaticLootContainers": true,
     "staticLootContainers": [

@@ -1,105 +1,113 @@
 {
-  "6929a4d8b9607c2343c085d1": {
-    "itemTplToClone": "5ede474b0c226a66f5402622",
+  "693e99dc8898b6796d64b4cf": {
+    "itemTplToClone": "5cc80f38e4a949001152b560",
     "parentId": "5485a8684bdc2da71d8b4567",
     "handbookParentId": "5b47574386f77428ca22b33b",
     "overrideProperties": {
-      "ArmorDamage": 112,
+      "ammoAccr": -2,
+      "ammoRec": 6,
+      "ArmorDamage": 45,
       "BackgroundColor": "red",
-      "Damage": 333,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
+      "Damage": 35,
       "DurabilityBurnModificator": 1.7,
-      "ExplosionStrength": 95,
-      "FragmentationChance": 0,
-      "FragmentsCount": 20,
-      "FuzeArmTimeSec": 0.02,
-      "HeatFactor": 1,
-      "HeavyBleedingDelta": 1.95,
-      "ExplosionType": "smallgrenade_expl",
-      "InitialSpeed": 100,
-      "LightBleedingDelta": 0,
+      "FragmentationChance": 0.02,
+      "FragmentsCount": 0,
+      "HeatFactor": 1.7491,
+      "HeavyBleedingDelta": 0.05,
+      "InitialSpeed": 792,
+      "LightBleedingDelta": 0.10,
       "MalfFeedChance": 0.011,
-      "MalfMisfireChance": 0.012,
+      "MalfMisfireChance": 0.148,
       "MaxFragmentsCount": 1,
       "MinFragmentsCount": 1,
       "MisfireChance": 0.01,
-      "RicochetChance": 0
+      "PenetrationChanceObstacle": 0.15,
+      "PenetrationDamageMod": 0.16,
+      "PenetrationPower": 49,
+      "RicochetChance": 0.3,
+      "Tracer": true,
+      "TracerColor": "green"
     },
     "locales": {
       "en": {
-        "name": "40x46mm M666 (HE) grenade - H.C.T.B",
-        "shortName": "H.C.T.B",
-        "description": "HCTB stands for -Here Comes The Boom-. This grenade is a modified version of the 40x46mm M381 (HE). Modified by ODIN."
+        "name": "5.7x28mm Hornet",
+        "shortName": "Hornet",
+        "description": "A 5.7x28mm round, modified by ODIN."
       }
     },
-    "fleaPriceRoubles": 666666,
-    "handbookPriceRoubles": 666666,
+    "fleaPriceRoubles": 1210,
+    "handbookPriceRoubles": 720,
     "addtoBots": true,
     "addCaliberToAllCloneLocations": true,
     "addtoStaticAmmo": true,
-    "staticAmmoProbability": 980,
+    "staticAmmoProbability": 1355,
+    "addtoSpecialSlots": true,
     "addtoModSlots": false,
     "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_BURIED_BARREL_CACHE",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_CIVILIAN_BODY",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV_4X4_2",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_PMC_BODY",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_SCAV_BODY",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 1001
+        "probability": 2112
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 1001
+        "probability": 2112
       }
-    ]
+    ],
+    "addtoTraders": false
   }
 }

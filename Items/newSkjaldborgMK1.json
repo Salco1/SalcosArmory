@@ -1,31 +1,42 @@
 {
-  "692bfcb509c7a850394ccf93": {
-    "itemTplToClone": "5b432b2f5acfc4771e1c6622",
-    "parentId": "5a341c4686f77469e155819e",
-    "handbookParentId": "5b47574386f77428ca22b32f",
+  "693da1f4e730b6700964dda7": {
+    "itemTplToClone": "656faf0ca0dce000a2020f77",
+    "parentId": "644120aa86ffbe10ee032b6f",
+    "handbookParentId": "5b5f704686f77447ec5d76d7",
     "overrideProperties": {
-      "armorClass": 5,
+      "armorClass": 6,
+	  "ArmorMaterial": "UHMWPE",
+	  "ArmorType": "Light",
       "BackgroundColor": "violet",
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
-      "Durability": 35,
-      "MaxDurability": 35,
+      "BluntThroughput": 0.3,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
+	  "CanPutIntoDuringTheRaid": true,
+      "Durability": 70,
+      "MaxDurability": 70,
+      "mousePenalty": -1,
+	  "MaterialType": "BodyArmor",
+	  "MetascoreGroup": "Defence",
       "ConflictingItems": [],
       "BlocksHeadwear": false,
-      "RarityPvE": "Superrare"
+      "RarityPvE": "Superrare",
+      "RepairCost": 720,
+      "speedPenaltyPercent": -1.8,
+      "weaponErgonomicPenalty": -1.7,
+      "Weight": 2.1
     },
     "locales": {
       "en": {
-        "name": "Shattered lightweight armored mask - #Reinforced",
-        "shortName": "Shattered",
-        "description": "Reinforced by ODIN."
+        "name": "Skjaldborg Mk.I ballistic plate",
+        "shortName": "Skjaldborg",
+        "description": "A UHMWPE plate for torso front and back pouches of plate carrier, made by ODIN."
       }
     },
-    "fleaPriceRoubles": 330500,
-    "handbookPriceRoubles": 330500,
+    "fleaPriceRoubles": 800000,
+    "handbookPriceRoubles": 500000,
     "addtoBots": true,
     "addtoModSlots": true,
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
         "probability": 900,

@@ -1,34 +1,35 @@
 {
-  "691377baadf5cb5a56222014": {
-    "itemTplToClone": "5ea172e498dacb342978818e",
-    "parentId": "550aa4bf4bdc2dd6348b456b",
-    "handbookParentId": "5b5f724c86f774093f2ecf15",
+  "693eaa5b4015878f9ce091fc": {
+    "itemTplToClone": "59c1383d86f774290a37e0ca",
+    "parentId": "5448bc234bdc2d3c308b4569",
+    "handbookParentId": "5b5f754a86f774094242f19b",
     "overrideProperties": {
-      "Accuracy": 3,
       "BackgroundColor": "violet",
-      "DurabilityBurnModificator": 1.05,
-      "Ergonomics": -1.5,
+      "Ergonomics": -8,
       "ConflictingItems": [],
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
+      "CheckTimeModifier": 10,
       "RarityPvE": "Rare",
-      "Recoil": -7
+      "LoadUnloadModifier": 12,
+      "MalfunctionChance": 0.023
     },
     "locales": {
       "en": {
-        "name": "AR-15 SureFire SF4P 5.56x45 flash hider - #Rev. 2",
-        "shortName": "SF4P R2",
+        "name": "AR-15 5.56x45/.300 BLK Magpul PMAG D-60 STANAG 60-round magazine - #Rev. 2",
+        "shortName": "D60 Rev.2",
         "description": "Enhanced by ODIN."
       }
     },
-    "fleaPriceRoubles": 33211,
-    "handbookPriceRoubles": 16544,
+    "fleaPriceRoubles": 72654,
+    "handbookPriceRoubles": 63942,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_muzzle"
+      "mod_magazine"
     ],
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
+    "addtoTraders": false,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
@@ -51,10 +52,6 @@
         "probability": 4350
       },
       {
-        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 4350
-      },
-      {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
         "probability": 4350
       },
@@ -66,7 +63,6 @@
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
         "probability": 4350
       }
-    ],
-    "addtoTraders": false
+    ]
   }
 }
