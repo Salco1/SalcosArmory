@@ -1,0 +1,74 @@
+{
+  "694115a7b55f2ad8de31c144": {
+    "_id": "694115a7b55f2ad8de31c144",
+    "acceptPlayerMessage": "694115a7b55f2ad8de31c144 acceptPlayerMessage",
+    "acceptanceAndFinishingSource": "eft",
+    "arenaLocations": [],
+    "canShowNotificationsInGame": true,
+    "changeQuestMessageText": "694115a7b55f2ad8de31c144 changeQuestMessageText",
+    "completePlayerMessage": "694115a7b55f2ad8de31c144 completePlayerMessage",
+    "conditions": {
+      "AvailableForFinish": [
+        {
+          "conditionType": "HandoverItem",
+          "dogtagLevel": 0,
+          "dynamicLocale": false,
+          "globalQuestCounterId": "",
+          "id": "694115a7b55f2ad8de31c145",
+          "index": 0,
+          "isEncoded": false,
+          "maxDurability": 100,
+          "minDurability": 0,
+          "onlyFoundInRaid": false,
+          "parentId": "",
+          "target": [
+            "5449016a4bdc2d6f028b456f"
+          ],
+          "value": 25000,
+          "visibilityConditions": []
+        }
+      ],
+      "AvailableForStart": [],
+      "Fail": []
+    },
+    "declinePlayerMessage": "694115a7b55f2ad8de31c144 declinePlayerMessage",
+    "description": "694115a7b55f2ad8de31c144 description",
+    "failMessageText": "694115a7b55f2ad8de31c144 failMessageText",
+    "gameModes": [],
+    "image": "/files/quest/icon/Quest_001",
+    "instantComplete": false,
+    "isKey": false,
+    "location": "any",
+    "name": "694115a7b55f2ad8de31c144 name",
+    "note": "694115a7b55f2ad8de31c144 note",
+    "progressSource": "eft",
+    "rankingModes": [],
+    "restartable": false,
+    "rewards": {
+      "Fail": [],
+      "Started": [],
+      "Success": [
+        {
+          "availableInGameEditions": [],
+          "gameMode": [
+            "regular",
+            "pve"
+          ],
+          "id": "694115a7b55f2ad8de31c146",
+          "isHidden": false,
+          "target": "691ca7ceec00e92e47c7520a",
+          "type": "Experience",
+          "unknown": false,
+          "value": 500
+        }
+      ]
+    },
+    "secretQuest": false,
+    "side": "Pmc",
+    "startedMessageText": "694115a7b55f2ad8de31c144 startedMessageText",
+    "status": 0,
+    "successMessageText": "694115a7b55f2ad8de31c144 successMessageText",
+    "traderId": "691ca7ceec00e92e47c7520a",
+    "type": "Loyalty"
+  }
+}

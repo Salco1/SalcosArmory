@@ -1,0 +1,100 @@
+{
+  "6941c16f983123c216f584da": {
+    "_id": "6941c16f983123c216f584da",
+    "acceptPlayerMessage": "6941c16f983123c216f584da acceptPlayerMessage",
+    "acceptanceAndFinishingSource": "eft",
+    "arenaLocations": [],
+    "canShowNotificationsInGame": true,
+    "changeQuestMessageText": "6941c16f983123c216f584da changeQuestMessageText",
+    "completePlayerMessage": "6941c16f983123c216f584da completePlayerMessage",
+    "conditions": {
+      "AvailableForFinish": [
+        {
+          "conditionType": "CounterCreator",
+          "counter": {
+            "conditions": [
+              {
+                "compareMethod": ">=",
+                "conditionType": "Kills",
+                "id": "8a063df1abe681304c4925c1",
+                "target": "AnyPmc",
+                "value": 1
+              }
+            ],
+            "id": "82564d13a1d003f8491c6c70"
+          },
+          "doNotResetIfCounterCompleted": false,
+          "dynamicLocale": false,
+          "globalQuestCounterId": "",
+          "id": "765f2090b3c55c0b87157ee7",
+          "index": 0,
+          "oneSessionOnly": false,
+          "parentId": "",
+          "type": "Elimination",
+          "value": 15,
+          "visibilityConditions": []
+        },
+        {
+          "conditionType": "HandoverItem",
+          "dogtagLevel": 20,
+          "dynamicLocale": false,
+          "globalQuestCounterId": "",
+          "id": "cbeb43cf79da2dd30acfcf8f",
+          "index": 1,
+          "isEncoded": false,
+          "maxDurability": 100,
+          "minDurability": 0,
+          "onlyFoundInRaid": true,
+          "parentId": "",
+          "target": [
+            "59f32bb586f774757e1e8442",
+            "59f32c3b86f77472a31742f0"
+          ],
+          "value": 15,
+          "visibilityConditions": []
+        }
+      ],
+      "AvailableForStart": [],
+      "Fail": []
+    },
+    "declinePlayerMessage": "6941c16f983123c216f584da declinePlayerMessage",
+    "description": "6941c16f983123c216f584da description",
+    "failMessageText": "6941c16f983123c216f584da failMessageText",
+    "gameModes": [],
+    "image": "/files/quest/icon/Quest_002",
+    "instantComplete": false,
+    "isKey": false,
+    "location": "any",
+    "name": "6941c16f983123c216f584da name",
+    "note": "6941c16f983123c216f584da note",
+    "progressSource": "eft",
+    "rankingModes": [],
+    "restartable": false,
+    "rewards": {
+      "Fail": [],
+      "Started": [],
+      "Success": [
+        {
+          "availableInGameEditions": [],
+          "gameMode": [
+            "regular",
+            "pve"
+          ],
+          "id": "c96b51e6b779020acce9d062",
+          "isHidden": false,
+          "target": "691ca7ceec00e92e47c7520a",
+          "type": "Experience",
+          "unknown": false,
+          "value": 2500
+        }
+      ]
+    },
+    "secretQuest": false,
+    "side": "Pmc",
+    "startedMessageText": "6941c16f983123c216f584da startedMessageText",
+    "status": 0,
+    "successMessageText": "6941c16f983123c216f584da successMessageText",
+    "traderId": "691ca7ceec00e92e47c7520a",
+    "type": "Elimination"
+  }
+}
