@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "_id": "6957ca19c150c0264c5b5f73",
+      "_tpl": "6957ca19c150c0264c5b5f73",
+      "parentId": "hideout",
+      "slotId": "hideout",
+      "upd": {
+        "UnlimitedCount": true,
+        "StackObjectsCount": 9999999,
+        "BuyRestrictionMax": 1,
+        "BuyRestrictionCurrent": 0
+      }
+    },
+	
+	{
+      "_id": "6957d3a08924d28efe8f18d1",
+      "_tpl": "657ba2eef58ba5a625010798",
+      "parentId": "6957ca19c150c0264c5b5f73",
+      "slotId": "Helmet_top"
+    },
+    {
+      "_id": "6957d3a47f6096969b4efed5",
+      "_tpl": "657ba34b9ba22f103e08139b",
+      "parentId": "6957ca19c150c0264c5b5f73",
+      "slotId": "Helmet_back"
+    }
+  ],  
+  
+  "barter_scheme": {
+    "6957ca19c150c0264c5b5f73": [
+      [
+        {
+          "count": 875545,
+          "_tpl": "5449016a4bdc2d6f028b456f"
+        }
+      ]
+    ]
+  },
+  "loyal_level_items": {
+    "6957ca19c150c0264c5b5f73": 1
+  }
+}

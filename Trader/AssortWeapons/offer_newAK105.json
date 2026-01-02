@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "_id": "69327001c0ffee0011223344",
+      "_tpl": "691920dce795053d025d63db",
+      "parentId": "hideout",
+      "slotId": "hideout",
+      "upd": {
+        "UnlimitedCount": true,
+        "StackObjectsCount": 9999999,
+        "BuyRestrictionMax": 2,
+        "BuyRestrictionCurrent": 0,
+        "Repairable": {
+          "Durability": 100,
+          "MaxDurability": 100
+        }
+      }
+    },
+    {
+      "_id": "69327001c0ffee0011223345",
+      "_tpl": "59c6633186f7740cf0493bb9",
+      "parentId": "69327001c0ffee0011223344",
+      "slotId": "mod_gas_block"
+    },
+    {
+      "_id": "69327001c0ffee0011223346",
+      "_tpl": "5648b1504bdc2d9d488b4584",
+      "parentId": "69327001c0ffee0011223345",
+      "slotId": "mod_handguard"
+    },
+    {
+      "_id": "69327001c0ffee0011223347",
+      "_tpl": "5ac72e945acfc43f3b691116",
+      "parentId": "69327001c0ffee0011223344",
+      "slotId": "mod_muzzle"
+    },
+    {
+      "_id": "69327001c0ffee0011223348",
+      "_tpl": "5649ade84bdc2d1b2b8b4587",
+      "parentId": "69327001c0ffee0011223344",
+      "slotId": "mod_pistol_grip"
+    },
+    {
+      "_id": "69327001c0ffee0011223349",
+      "_tpl": "5ac50da15acfc4001718d287",
+      "parentId": "69327001c0ffee0011223344",
+      "slotId": "mod_reciever"
+    },
+    {
+      "_id": "69327001c0ffee001122334a",
+      "_tpl": "5ac733a45acfc400192630e2",
+      "parentId": "69327001c0ffee0011223344",
+      "slotId": "mod_sight_rear"
+    },
+    {
+      "_id": "69327001c0ffee001122334b",
+      "_tpl": "5ac50c185acfc400163398d4",
+      "parentId": "69327001c0ffee0011223344",
+      "slotId": "mod_stock"
+    },
+    {
+      "_id": "69327001c0ffee001122334c",
+      "_tpl": "55d480c04bdc2d1d4e8b456a",
+      "parentId": "69327001c0ffee0011223344",
+      "slotId": "mod_magazine"
+    }
+  ],
+  "barter_scheme": {
+    "69327001c0ffee0011223344": [
+      [
+        {
+          "count": 69877,
+          "_tpl": "5449016a4bdc2d6f028b456f"
+        }
+      ]
+    ]
+  },
+  "loyal_level_items": {
+    "69327001c0ffee0011223344": 1
+  }
+}

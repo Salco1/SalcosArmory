@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "_id": "694814f1c9a646fec47d110d",
+      "_tpl": "694814696380f71ab161dc42",
+      "parentId": "hideout",
+      "slotId": "hideout",
+      "upd": {
+        "UnlimitedCount": true,
+        "StackObjectsCount": 9999999,
+        "BuyRestrictionMax": 1,
+        "BuyRestrictionCurrent": 0
+      }
+    },
+
+    {
+      "_id": "694815c33f6cd288aba16e1a",
+      "_tpl": "6946ebb44e3088ef0bb4dfbe",
+      "parentId": "694814f1c9a646fec47d110d",
+      "slotId": "Soft_armor_front"
+    },
+    {
+      "_id": "69481634015c55ee18152793",
+      "_tpl": "6946ebbacf8f3b61ff54d3eb",
+      "parentId": "694814f1c9a646fec47d110d",
+      "slotId": "Soft_armor_back"
+    },
+
+    {
+      "_id": "694816b2b2a1d2e3f4a5b601",
+      "_tpl": "656fad8c498d1b7e3e071da0",
+      "parentId": "694814f1c9a646fec47d110d",
+      "slotId": "Front_plate"
+    },
+    {
+      "_id": "694816d9c3d4e5f607182901",
+      "_tpl": "656fad8c498d1b7e3e071da0",
+      "parentId": "694814f1c9a646fec47d110d",
+      "slotId": "Back_plate"
+    }
+  ],
+
+  "barter_scheme": {
+    "694814f1c9a646fec47d110d": [
+      [
+        {
+          "count": 317501,
+          "_tpl": "5449016a4bdc2d6f028b456f"
+        }
+      ]
+    ]
+  },
+
+  "loyal_level_items": {
+    "694814f1c9a646fec47d110d": 1
+  }
+}

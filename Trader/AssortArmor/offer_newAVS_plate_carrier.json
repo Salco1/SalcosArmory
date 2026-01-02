@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "_id": "69325001c0ffee0011223400",
+      "_tpl": "6946eb7e67ba8110a6ddfd5e",
+      "parentId": "hideout",
+      "slotId": "hideout",
+      "upd": {
+        "UnlimitedCount": true,
+        "StackObjectsCount": 9999999,
+        "BuyRestrictionMax": 1,
+        "BuyRestrictionCurrent": 0
+      }
+    },
+
+    {
+      "_id": "69325001c0ffee0011223401",
+      "_tpl": "6946ebb44e3088ef0bb4dfbe",
+      "parentId": "69325001c0ffee0011223400",
+      "slotId": "Soft_armor_front"
+    },
+    {
+      "_id": "69325001c0ffee0011223402",
+      "_tpl": "6946ebbacf8f3b61ff54d3eb",
+      "parentId": "69325001c0ffee0011223400",
+      "slotId": "Soft_armor_back"
+    },
+    {
+      "_id": "69325001c0ffee0011223403",
+      "_tpl": "6946ebc505411b23e69d540f",
+      "parentId": "69325001c0ffee0011223400",
+      "slotId": "Groin"
+    },
+
+    {
+      "_id": "69325001c0ffee0011223404",
+      "_tpl": "656fad8c498d1b7e3e071da0",
+      "parentId": "69325001c0ffee0011223400",
+      "slotId": "Front_plate"
+    },
+    {
+      "_id": "69325001c0ffee0011223405",
+      "_tpl": "656fad8c498d1b7e3e071da0",
+      "parentId": "69325001c0ffee0011223400",
+      "slotId": "Back_plate"
+    }
+  ],
+
+  "barter_scheme": {
+    "69325001c0ffee0011223400": [
+      [
+        {
+          "count": 321455,
+          "_tpl": "5449016a4bdc2d6f028b456f"
+        }
+      ]
+    ]
+  },
+
+  "loyal_level_items": {
+    "69325001c0ffee0011223400": 1
+  }
+}
