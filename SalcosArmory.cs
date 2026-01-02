@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
@@ -15,14 +17,16 @@ public sealed record ModMetadata : AbstractModMetadata
     public override string ModGuid { get; init; } = "com.salco.salcosarmory";
     public override string Name { get; init; } = "Salco's Armory";
     public override string Author { get; init; } = "Salco";
-    public override SemanticVersioning.Version Version { get; init; } = new("1.3.0");
-    public override Range SptVersion { get; init; } = new("~4.0.0");
+    public override SemanticVersioning.Version Version { get; init; } = new("1.5.0");
+    public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.1");
     public override string License { get; init; } = "MIT";
     public override bool? IsBundleMod { get; init; } = true;
+
     public override Dictionary<string, Range>? ModDependencies { get; init; } = new()
     {
-        { "com.wtt.commonlib", new Range("~2.0.0") }
+        { "com.wtt.commonlib", new Range("~2.0.8") }
     };
+
     public override string? Url { get; init; }
     public override List<string>? Contributors { get; init; }
     public override List<string>? Incompatibilities { get; init; }
@@ -38,25 +42,54 @@ public sealed class SalcosArmoryMod(
     public async Task OnLoad()
     {
         var assembly = Assembly.GetExecutingAssembly();
+        var modRoot = Path.GetDirectoryName(assembly.Location) ?? "";
 
         var itemFolders = new[]
         {
             "Weapons",
             "Ammo",
             "Attachments",
-            "Items"
+            "Items",
+            "Armor"
         };
 
         foreach (var folder in itemFolders)
         {
+            var absoluteFolder = Path.Combine(modRoot, folder);
+            if (!Directory.Exists(absoluteFolder))
+                continue;
+
             await wttCommon.CustomItemServiceExtended.CreateCustomItems(assembly, Path.Join(folder));
+        }
+
+        try
+        {
+            BuiltInPlatePatcher.Apply(databaseService);
+        }
+        catch
+        {
+            // IMPORTANT: Never crash server because of optional runtime patches.
         }
 
         await wttCommon.CustomHideoutRecipeService.CreateHideoutRecipes(assembly, Path.Join("Recipes"));
 
-        SalcosCompat.Apply(databaseService, assembly, logger);
+        try
+        {
+            SalcosCompat.Apply(databaseService, assembly);
+        }
+        catch
+        {
+            // IMPORTANT: Compat layer must never stop startup.
+        }
+		try
+		{
+			BallisticPlateCompat.Apply(databaseService);
+		}
+		catch
+		{
+			// IMPORTANT: Never crash server because of global compat patches.
+		}
 
-        // This line will appear every time the mod has finished loading
         logger.LogInformation("[SALCO'S ARMORY successfully loaded]");
     }
 }

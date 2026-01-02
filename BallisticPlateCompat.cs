@@ -5,427 +5,231 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.Json;
-using System.Text.RegularExpressions;
-using SPTarkov.DI.Annotations;
-using SPTarkov.Server.Core.DI;
+using SPTarkov.Server.Core.Models.Common;
 using SPTarkov.Server.Core.Services;
-using Path = System.IO.Path;
 
 namespace SalcosArmory;
 
-[Injectable(TypePriority = OnLoadOrder.PostSptModLoader + 2)]
-public sealed class BallisticPlateCompat(DatabaseService databaseService) : IOnLoad
+internal static class BallisticPlateCompat
 {
-    private static readonly Regex Hex24 = new(@"[0-9a-fA-F]{24}", RegexOptions.Compiled);
+    private const string ConfigRelativePath = "Config/BallisticPlateCompat.jsonc";
 
-    public Task OnLoad()
-    {
-        var baseDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        if (string.IsNullOrWhiteSpace(baseDir))
-            return Task.CompletedTask;
-
-        var configPath = Path.Combine(baseDir, "Config", "BallisticPlateCompat.jsonc");
-        var config = LoadConfig(configPath);
-        if (config.Mappings.Count == 0)
-            return Task.CompletedTask;
-
-        var itemsDict = TryGetItemsDictionary(databaseService.GetTables());
-        if (itemsDict is null)
-            return Task.CompletedTask;
-
-        foreach (var m in config.Mappings)
-        {
-            var source = NormalizeToHex24(m.SourcePlateTpl);
-            if (string.IsNullOrWhiteSpace(source))
-                continue;
-
-            var clones = (m.ClonePlateTpls ?? new List<string>())
-                .Select(NormalizeToHex24)
-                .Where(x => !string.IsNullOrWhiteSpace(x))
-                .Distinct(StringComparer.OrdinalIgnoreCase)
-                .ToList();
-
-            if (clones.Count == 0)
-                continue;
-
-            PatchAllItemsThatAcceptSourcePlate(itemsDict, source!, clones!);
-        }
-
-        return Task.CompletedTask;
-    }
-
-    private static void PatchAllItemsThatAcceptSourcePlate(
-        IDictionary itemsDict,
-        string sourcePlateTplHex,
-        List<string> clonePlateTplHexes)
-    {
-        foreach (DictionaryEntry entry in itemsDict)
-        {
-            var templateItem = entry.Value;
-            if (templateItem is null)
-                continue;
-
-            var props = GetMemberValue(templateItem, "Properties") ?? GetMemberValue(templateItem, "_props") ?? GetMemberValue(templateItem, "props");
-            if (props is null)
-                continue;
-
-            var slotsAll = new List<object>();
-            slotsAll.AddRange(CollectEnumerableElements(GetMemberValue(props, "Slots") ?? GetMemberValue(props, "slots")));
-            slotsAll.AddRange(CollectEnumerableElements(GetMemberValue(props, "PlateSlots") ?? GetMemberValue(props, "plateSlots")));
-            if (slotsAll.Count == 0)
-                continue;
-
-            foreach (var slotRaw in slotsAll)
-            {
-                var slot = Unwrap(slotRaw);
-                if (slot is null)
-                    continue;
-
-                var propsOwner = GetMemberValue(slot, "Properties") ??
-                                 GetMemberValue(slot, "properties") ??
-                                 GetMemberValue(slot, "_props") ??
-                                 GetMemberValue(slot, "Props") ??
-                                 GetMemberValue(slot, "props") ??
-                                 slot;
-
-                var filtersObj = GetMemberValue(propsOwner, "Filters") ?? GetMemberValue(propsOwner, "filters");
-                var filters = CollectEnumerableElements(filtersObj);
-                if (filters.Count == 0)
-                    continue;
-
-                foreach (var filterRaw in filters)
-                {
-                    var filter = Unwrap(filterRaw);
-                    if (filter is null)
-                        continue;
-
-                    var filterSetObj = GetMemberValue(filter, "Filter") ?? GetMemberValue(filter, "filter");
-                    if (filterSetObj is null)
-                        continue;
-
-                    if (!TryAsEnumerable(filterSetObj, out var filterEnumerable))
-                        continue;
-
-                    if (!EnumerableContainsHex24(filterEnumerable, sourcePlateTplHex))
-                        continue;
-
-                    foreach (var cloneHex in clonePlateTplHexes)
-                    {
-                        if (EnumerableContainsHex24(filterEnumerable, cloneHex))
-                            continue;
-
-                        TryAddToCollection(filterSetObj, cloneHex);
-                    }
-                }
-            }
-        }
-    }
-
-    private static bool TryAsEnumerable(object obj, out IEnumerable enumerable)
-    {
-        if (obj is string)
-        {
-            enumerable = Array.Empty<object>();
-            return false;
-        }
-
-        if (obj is IEnumerable en)
-        {
-            enumerable = en;
-            return true;
-        }
-
-        enumerable = Array.Empty<object>();
-        return false;
-    }
-
-    private static bool EnumerableContainsHex24(IEnumerable en, string wantedHex24)
-    {
-        foreach (var el in en)
-        {
-            var norm = NormalizeToHex24(NormalizeTpl(el));
-            if (!string.IsNullOrWhiteSpace(norm) &&
-                string.Equals(norm, wantedHex24, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private static bool TryAddToCollection(object collection, string tplHex24)
+    public static void Apply(DatabaseService databaseService)
     {
         try
         {
-            if (collection is IList list)
-            {
-                list.Add(tplHex24);
-                return true;
-            }
+            var mappings = LoadMappings();
+            if (mappings.Count == 0)
+                return;
 
-            var colType = collection.GetType();
-            var elementType = GetGenericElementType(colType);
+            var items = databaseService.GetTables().Templates.Items;
 
-            if (elementType == null)
+            foreach (var item in items.Values)
             {
-                var addString = colType.GetMethod("Add", new[] { typeof(string) });
-                if (addString != null)
+                var props = Get(item, "_props") ?? Get(item, "Properties");
+                if (props == null)
+                    continue;
+
+                var slotsObj = Get(props, "Slots") ?? Get(props, "slots");
+                if (slotsObj is not IEnumerable slotsEnum || slotsObj is string)
+                    continue;
+
+                foreach (var slot in slotsEnum.Cast<object>())
                 {
-                    addString.Invoke(collection, new object[] { tplHex24 });
-                    return true;
+                    PatchSlotIfMatchesMapping(slot, mappings);
                 }
-                return false;
             }
-
-            var element = CreateElement(elementType, tplHex24);
-            if (element == null)
-                return false;
-
-            var add = colType.GetMethods(BindingFlags.Instance | BindingFlags.Public)
-                .FirstOrDefault(m =>
-                    m.Name == "Add" &&
-                    m.GetParameters().Length == 1 &&
-                    m.GetParameters()[0].ParameterType.IsAssignableFrom(elementType));
-
-            add ??= colType.GetMethods(BindingFlags.Instance | BindingFlags.Public)
-                .FirstOrDefault(m => m.Name == "Add" && m.GetParameters().Length == 1);
-
-            if (add == null)
-                return false;
-
-            add.Invoke(collection, new[] { element });
-            return true;
         }
         catch
         {
-            return false;
+            // IMPORTANT: Never crash server because of optional compatibility patches.
         }
     }
 
-    private static Type? GetGenericElementType(Type t)
+    private static void PatchSlotIfMatchesMapping(object slot, List<PlateMapping> mappings)
     {
-        if (t.IsGenericType)
+        var slotProps = Get(slot, "_props") ?? Get(slot, "Properties");
+        if (slotProps == null)
+            return;
+
+        var filtersObj = Get(slotProps, "filters") ?? Get(slotProps, "Filters");
+        if (filtersObj is not IEnumerable filtersEnum || filtersObj is string)
+            return;
+
+        foreach (var filterEntry in filtersEnum.Cast<object>())
         {
-            var ga = t.GetGenericArguments();
-            if (ga.Length == 1)
-                return ga[0];
-        }
+            var filterCollection = Get(filterEntry, "Filter") ?? Get(filterEntry, "filter");
+            if (filterCollection == null)
+                continue;
 
-        var ie = t.GetInterfaces()
-            .FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>));
-
-        return ie?.GetGenericArguments().FirstOrDefault();
-    }
-
-    private static object? CreateElement(Type elementType, string tplHex24)
-    {
-        if (elementType == typeof(string) || elementType == typeof(object))
-            return tplHex24;
-
-        var ctor = elementType.GetConstructor(new[] { typeof(string) });
-        if (ctor != null)
-            return ctor.Invoke(new object[] { tplHex24 });
-
-        var inst = Activator.CreateInstance(elementType);
-        if (inst != null)
-        {
-            var valueProp = elementType.GetProperty("Value", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
-            if (valueProp != null && valueProp.CanWrite)
+            foreach (var mapping in mappings)
             {
-                valueProp.SetValue(inst, tplHex24);
-                return inst;
+                if (!ContainsTpl(filterCollection, mapping.SourcePlateTpl))
+                    continue;
+
+                foreach (var cloneTpl in mapping.ClonePlateTpls)
+                {
+                    AddTplIfMissing(filterCollection, cloneTpl);
+                }
             }
         }
-
-        return null;
     }
 
-    private static List<object> CollectEnumerableElements(object? enumerableObj)
+    private static List<PlateMapping> LoadMappings()
     {
-        var result = new List<object>();
-        if (enumerableObj is null || enumerableObj is string)
+        var result = new List<PlateMapping>();
+
+        var assemblyPath = Assembly.GetExecutingAssembly().Location;
+        var modRoot = Path.GetDirectoryName(assemblyPath);
+        if (string.IsNullOrWhiteSpace(modRoot))
             return result;
 
-        if (enumerableObj is IEnumerable en)
+        var configPath = Path.Combine(modRoot, ConfigRelativePath.Replace('/', Path.DirectorySeparatorChar));
+        if (!File.Exists(configPath))
+            return result;
+
+        var json = File.ReadAllText(configPath);
+
+        var options = new JsonSerializerOptions
         {
-            foreach (var el in en)
-            {
-                var u = Unwrap(el);
-                if (u != null)
-                    result.Add(u);
-            }
+            ReadCommentHandling = JsonCommentHandling.Skip,
+            AllowTrailingCommas = true,
+            PropertyNameCaseInsensitive = true
+        };
+
+        var root = JsonSerializer.Deserialize<BallisticPlateCompatConfig>(json, options);
+        if (root?.Mappings == null)
+            return result;
+
+        foreach (var m in root.Mappings)
+        {
+            if (m == null)
+                continue;
+
+            if (string.IsNullOrWhiteSpace(m.SourcePlateTpl))
+                continue;
+
+            if (m.ClonePlateTpls == null || m.ClonePlateTpls.Count == 0)
+                continue;
+
+            var cleaned = m.ClonePlateTpls
+                .Where(x => !string.IsNullOrWhiteSpace(x))
+                .Select(x => x.Trim())
+                .Distinct(StringComparer.Ordinal)
+                .ToList();
+
+            if (cleaned.Count == 0)
+                continue;
+
+            result.Add(new PlateMapping(m.SourcePlateTpl.Trim(), cleaned));
         }
 
         return result;
     }
 
-    private static object? Unwrap(object? el)
+    private static bool ContainsTpl(object collection, string tpl)
     {
-        if (el is null)
-            return null;
-
-        if (el is DictionaryEntry de)
-            return de.Value;
-
-        var t = el.GetType();
-        if (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(KeyValuePair<,>))
+        if (collection is IEnumerable enumerable && collection is not string)
         {
-            var vp = t.GetProperty("Value");
-            if (vp != null)
+            foreach (var v in enumerable)
             {
-                try { return vp.GetValue(el); } catch { return null; }
+                if (v == null)
+                    continue;
+
+                if (string.Equals(v.ToString(), tpl, StringComparison.Ordinal))
+                    return true;
             }
         }
 
-        return el;
+        return false;
     }
 
-    private static string? NormalizeTpl(object? obj)
+    private static void AddTplIfMissing(object collection, string tpl)
     {
-        if (obj is null)
-            return null;
+        if (ContainsTpl(collection, tpl))
+            return;
 
-        if (obj is string s)
-            return s;
-
-        var type = obj.GetType();
-        var valueProp = type.GetProperty("Value", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
-        if (valueProp != null)
+        // IList (List<string>, List<MongoId>, etc.)
+        if (collection is IList list)
         {
-            try { return valueProp.GetValue(obj)?.ToString(); } catch { return null; }
+            var elementType = GetIListElementType(list);
+            list.Add(ConvertTplToElement(tpl, elementType));
+            return;
         }
 
-        return obj.ToString();
+        // HashSet<T> / ISet<T> / other collections with Add(T)
+        var addMethod = FindAddMethod(collection);
+        if (addMethod != null)
+        {
+            var paramType = addMethod.GetParameters()[0].ParameterType;
+            addMethod.Invoke(collection, new[] { ConvertTplToElement(tpl, paramType) });
+        }
     }
 
-    private static string? NormalizeToHex24(string? input)
+    private static Type? GetIListElementType(IList list)
     {
-        if (string.IsNullOrWhiteSpace(input))
-            return null;
+        var t = list.GetType();
 
-        var m = Hex24.Match(input);
-        return m.Success ? m.Value.ToLowerInvariant() : null;
-    }
+        if (t.IsArray)
+            return t.GetElementType();
 
-    private static IDictionary? TryGetItemsDictionary(object? source)
-    {
-        if (source is null)
-            return null;
-
-        var directItems = GetMemberValue(source, "Items") ?? GetMemberValue(source, "items");
-        if (directItems is IDictionary directDict)
-            return directDict;
-
-        var templates = GetMemberValue(source, "Templates") ?? GetMemberValue(source, "templates");
-        if (templates != null)
-        {
-            var templItems = GetMemberValue(templates, "Items") ?? GetMemberValue(templates, "items");
-            if (templItems is IDictionary templDict)
-                return templDict;
-        }
-
-        var tables = GetMemberValue(source, "Tables") ?? GetMemberValue(source, "tables");
-        if (tables != null)
-        {
-            var templates2 = GetMemberValue(tables, "Templates") ?? GetMemberValue(tables, "templates");
-            if (templates2 != null)
-            {
-                var templItems2 = GetMemberValue(templates2, "Items") ?? GetMemberValue(templates2, "items");
-                if (templItems2 is IDictionary templDict2)
-                    return templDict2;
-            }
-        }
+        if (t.IsGenericType)
+            return t.GetGenericArguments().FirstOrDefault();
 
         return null;
     }
 
-    private static object? GetMemberValue(object target, string name)
+    private static MethodInfo? FindAddMethod(object collection)
     {
-        var type = target.GetType();
-
-        var prop = type.GetProperty(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
-        if (prop != null)
-        {
-            try { return prop.GetValue(target); } catch { return null; }
-        }
-
-        var field = type.GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
-        if (field != null)
-        {
-            try { return field.GetValue(target); } catch { return null; }
-        }
-
-        return null;
+        var t = collection.GetType();
+        return t.GetMethods(BindingFlags.Instance | BindingFlags.Public)
+            .FirstOrDefault(m =>
+                m.Name == "Add" &&
+                m.GetParameters().Length == 1);
     }
 
-    private static BallisticPlateCompatConfig LoadConfig(string configPath)
+    private static object ConvertTplToElement(string tpl, Type? targetType)
     {
-        try
-        {
-            if (!File.Exists(configPath))
-                return new BallisticPlateCompatConfig();
+        if (targetType == null)
+            return tpl;
 
-            var jsonOptions = new JsonDocumentOptions
-            {
-                AllowTrailingCommas = true,
-                CommentHandling = JsonCommentHandling.Skip
-            };
+        var underlying = Nullable.GetUnderlyingType(targetType);
+        if (underlying != null)
+            targetType = underlying;
 
-            using var stream = File.OpenRead(configPath);
-            using var doc = JsonDocument.Parse(stream, jsonOptions);
+        if (targetType == typeof(string) || targetType == typeof(object))
+            return tpl;
 
-            var root = doc.RootElement;
-            if (root.ValueKind != JsonValueKind.Object)
-                return new BallisticPlateCompatConfig();
+        if (targetType == typeof(MongoId))
+            return new MongoId(tpl);
 
-            if (!root.TryGetProperty("mappings", out var mappingsEl) || mappingsEl.ValueKind != JsonValueKind.Array)
-                return new BallisticPlateCompatConfig();
+        var ctor = targetType.GetConstructor(new[] { typeof(string) });
+        if (ctor != null)
+            return ctor.Invoke(new object[] { tpl });
 
-            var cfg = new BallisticPlateCompatConfig();
-
-            foreach (var m in mappingsEl.EnumerateArray())
-            {
-                if (m.ValueKind != JsonValueKind.Object)
-                    continue;
-
-                var source = m.TryGetProperty("sourcePlateTpl", out var sEl) ? sEl.GetString() : null;
-                if (string.IsNullOrWhiteSpace(source))
-                    continue;
-
-                var clones = new List<string>();
-                if (m.TryGetProperty("clonePlateTpls", out var cEl) && cEl.ValueKind == JsonValueKind.Array)
-                {
-                    foreach (var ce in cEl.EnumerateArray())
-                    {
-                        var v = ce.GetString();
-                        if (!string.IsNullOrWhiteSpace(v))
-                            clones.Add(v);
-                    }
-                }
-
-                cfg.Mappings.Add(new BallisticPlateCompatMapping
-                {
-                    SourcePlateTpl = source!,
-                    ClonePlateTpls = clones
-                });
-            }
-
-            return cfg;
-        }
-        catch
-        {
-            return new BallisticPlateCompatConfig();
-        }
+        return tpl;
     }
+
+    private static object? Get(object obj, string name)
+    {
+        var t = obj.GetType();
+
+        return t.GetProperty(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                   ?.GetValue(obj)
+               ?? t.GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                   ?.GetValue(obj);
+    }
+
+    private sealed record PlateMapping(string SourcePlateTpl, List<string> ClonePlateTpls);
 
     private sealed class BallisticPlateCompatConfig
     {
-        public List<BallisticPlateCompatMapping> Mappings { get; } = new();
+        public List<BallisticPlateCompatMapping>? Mappings { get; set; }
     }
 
     private sealed class BallisticPlateCompatMapping
     {
-        public string SourcePlateTpl { get; set; } = string.Empty;
-        public List<string> ClonePlateTpls { get; set; } = new();
+        public string? SourcePlateTpl { get; set; }
+        public List<string>? ClonePlateTpls { get; set; }
     }
 }

@@ -1,5 +1,6 @@
+using System;
+using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Text.Json.Nodes;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
@@ -28,57 +29,122 @@ public sealed class TraderOdin(
 
     public Task OnLoad()
     {
-        var pathToMod = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var traderDir = Path.Combine(pathToMod, "TraderOdin");
+        _ = timeUtil;
 
-        var traderImagePath = Path.Combine(traderDir, "Odin.png");
-        var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(traderDir, "Base.json");
+        var assembly = Assembly.GetExecutingAssembly();
+        var modRoot = modHelper.GetAbsolutePathToModFolder(assembly);
+        var traderDir = Path.Combine(modRoot, "Trader");
 
-        imageRouter.AddRoute(traderBase.Avatar.Replace(".png", string.Empty), traderImagePath);
-
-        addCustomTraderHelper.SetTraderUpdateTime(
-            _traderConfig,
-            traderBase,
-            timeUtil.GetHoursAsSeconds(1),
-            timeUtil.GetHoursAsSeconds(2)
-        );
+        var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(traderDir, "base.json");
 
         _ragfairConfig.Traders.TryAdd(traderBase.Id, true);
         addCustomTraderHelper.AddTraderWithEmptyAssortToDb(traderBase);
+
         addCustomTraderHelper.AddTraderToLocales(
             traderBase,
             "Odin",
-            "He is a former KSK elite soldier of the German Federal Armed Forces. He lost his right eye in combat, after which he was nicknamed Odin. His real name, origin, and age are unknown. He is an incredibly skilled marksman and weapons specialist. He is also an excellent gunsmith. He is more or less neutral towards all factions in Tarkov, but maintains a particularly good relationship with Mechanic, Prapor, and Sanitar."
+            "He is a former KSK elite soldier of the German Federal Armed Forces. Odin is known for his discipline, tactical expertise, and a no-nonsense attitude. He has a particularly good relationship with Mechanic, Prapor, and Sanitar."
         );
 
-        var baseAssort = new JsonObject
+        addCustomTraderHelper.SetTraderUpdateTime(_traderConfig, traderBase, 1800, 3600);
+
+        // --- Avatar routing (robust) ---
+        // base.json: "avatar": "/files/trader/avatar/odin.png"
+        var avatarUrl = traderBase.Avatar ?? "";
+        var avatarFileName = GetAvatarFileNameFromUrl(avatarUrl);
+
+        // You decided to use odin.png
+        if (string.IsNullOrWhiteSpace(avatarFileName))
+            avatarFileName = "odin.png";
+
+        var avatarDiskPath = Path.Combine(traderDir, avatarFileName);
+
+        // 1) Register exact key the client is requesting (your log shows this)
+        //    Example: "/files/trader/avatar/odin.png"
+        if (!string.IsNullOrWhiteSpace(avatarUrl))
         {
-            ["items"] = new JsonArray(),
-            ["barter_scheme"] = new JsonObject(),
-            ["loyal_level_items"] = new JsonObject()
-        };
+            imageRouter.AddRoute(avatarUrl, avatarDiskPath);
 
-        var mergedAssort = OdinAssortLoader.MergeAssortFromDataFolders(
-            baseAssort,
-            traderDir
-        );
+            // 2) Also register without extension (pattern from your SalcosArmory overview)
+            //    Example: "/files/trader/avatar/odin"
+            var noExt = RemoveFileExtensionFromUrl(avatarUrl);
+            if (!string.IsNullOrWhiteSpace(noExt) && !string.Equals(noExt, avatarUrl, StringComparison.Ordinal))
+            {
+                imageRouter.AddRoute(noExt, avatarDiskPath);
+            }
+        }
 
-        var tmpAssortPath = Path.Combine(traderDir, "__merged_assort.tmp.json");
-        System.IO.File.WriteAllText(tmpAssortPath, mergedAssort.ToJsonString(), new UTF8Encoding(false));
+        // 3) Also register just the filename (some routers resolve this way)
+        imageRouter.AddRoute(avatarFileName, avatarDiskPath);
 
-        var assort = modHelper.GetJsonDataFromFile<TraderAssort>(traderDir, "__merged_assort.tmp.json");
+        // 4) And as a last fallback, by traderId (some older implementations do this)
+        imageRouter.AddRoute(traderBase.Id, avatarDiskPath);
+
+        // --- Assort merge ---
+        JsonObject mergedAssort = OdinAssortLoader.MergeAssortFromSplitFolders(traderDir);
+
+        // Use ModHelper deserialization so SPT converters (MongoId etc.) are applied
+        var tmpFileName = "__merged_assort.tmp.json";
+        var tmpPath = Path.Combine(traderDir, tmpFileName);
 
         try
         {
-            System.IO.File.Delete(tmpAssortPath);
+            File.WriteAllText(tmpPath, mergedAssort.ToJsonString());
+            var assort = modHelper.GetJsonDataFromFile<TraderAssort>(traderDir, tmpFileName);
+            addCustomTraderHelper.OverwriteTraderAssort(traderBase.Id, assort);
         }
-        catch
+        finally
         {
-            // intentionally ignored – temporary file cleanup failure is non-fatal
+            try
+            {
+                if (File.Exists(tmpPath))
+                    File.Delete(tmpPath);
+            }
+            catch
+            {
+                // ignore temp cleanup errors
+            }
         }
-
-        addCustomTraderHelper.OverwriteTraderAssort(traderBase.Id, assort);
 
         return Task.CompletedTask;
+    }
+
+    private static string GetAvatarFileNameFromUrl(string avatarUrl)
+    {
+        if (string.IsNullOrWhiteSpace(avatarUrl))
+            return "";
+
+        var q = avatarUrl.IndexOf('?');
+        if (q >= 0)
+            avatarUrl = avatarUrl.Substring(0, q);
+
+        avatarUrl = avatarUrl.Replace('\\', '/');
+
+        var lastSlash = avatarUrl.LastIndexOf('/');
+        if (lastSlash < 0 || lastSlash == avatarUrl.Length - 1)
+            return "";
+
+        return avatarUrl.Substring(lastSlash + 1);
+    }
+
+    private static string RemoveFileExtensionFromUrl(string avatarUrl)
+    {
+        if (string.IsNullOrWhiteSpace(avatarUrl))
+            return "";
+
+        var q = avatarUrl.IndexOf('?');
+        if (q >= 0)
+            avatarUrl = avatarUrl.Substring(0, q);
+
+        avatarUrl = avatarUrl.Replace('\\', '/');
+
+        // Remove only the last extension segment
+        var lastDot = avatarUrl.LastIndexOf('.');
+        var lastSlash = avatarUrl.LastIndexOf('/');
+
+        if (lastDot <= 0 || lastDot < lastSlash)
+            return avatarUrl;
+
+        return avatarUrl.Substring(0, lastDot);
     }
 }

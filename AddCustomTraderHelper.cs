@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Models.Common;
@@ -11,10 +12,8 @@ namespace SalcosArmory;
 
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
 public sealed class AddCustomTraderHelper(
-    ISptLogger<AddCustomTraderHelper> logger,
     ICloner cloner,
-    DatabaseService databaseService,
-    LocaleService localeService)
+    DatabaseService databaseService)
 {
     public void SetTraderUpdateTime(TraderConfig traderConfig, TraderBase baseJson, int refreshTimeSecondsMin, int refreshTimeSecondsMax)
     {
@@ -36,10 +35,12 @@ public sealed class AddCustomTraderHelper(
             LoyalLevelItems = new Dictionary<MongoId, int>()
         };
 
+        var clonedBase = cloner.Clone(traderDetailsToAdd) ?? traderDetailsToAdd;
+
         var traderDataToAdd = new Trader
         {
             Assort = emptyTraderItemAssortObject,
-            Base = cloner.Clone(traderDetailsToAdd),
+            Base = clonedBase,
             QuestAssort = new()
             {
                 { "Started", new() },
@@ -49,29 +50,37 @@ public sealed class AddCustomTraderHelper(
             Dialogue = []
         };
 
-        if (!databaseService.GetTables().Traders.TryAdd(traderDetailsToAdd.Id, traderDataToAdd))
-        {
-            logger.Warning($"Unable to add trader: {traderDetailsToAdd.Id}, it already exists on the server");
-        }
+        databaseService.GetTables().Traders.TryAdd(traderDetailsToAdd.Id, traderDataToAdd);
     }
 
     public void AddTraderToLocales(TraderBase baseJson, string firstName, string description)
     {
-        var locales = databaseService.GetTables().Locales.Global;
         var newTraderId = baseJson.Id;
-        var fullName = baseJson.Name;
-        var nickName = baseJson.Nickname;
-        var location = baseJson.Location;
+        if (string.IsNullOrWhiteSpace(newTraderId))
+            return;
+
+        var locales = databaseService.GetTables().Locales.Global;
+
+        var fullName = baseJson.Name ?? "";
+        var nickName = baseJson.Nickname ?? "";
+        var location = baseJson.Location ?? "";
+
+        var safeFirstName = firstName ?? "";
+        var safeDescription = description ?? "";
 
         foreach (var (_, localeKvP) in locales)
         {
             localeKvP.AddTransformer(lazyloadedLocaleData =>
             {
-                lazyloadedLocaleData.Add($"{newTraderId} FullName", fullName);
-                lazyloadedLocaleData.Add($"{newTraderId} FirstName", firstName);
-                lazyloadedLocaleData.Add($"{newTraderId} Nickname", nickName);
-                lazyloadedLocaleData.Add($"{newTraderId} Location", location);
-                lazyloadedLocaleData.Add($"{newTraderId} Description", description);
+                lazyloadedLocaleData ??= new Dictionary<string, string>();
+
+                // Use indexer to avoid duplicate-key exceptions if transformer runs more than once
+                lazyloadedLocaleData[$"{newTraderId} FullName"] = fullName;
+                lazyloadedLocaleData[$"{newTraderId} FirstName"] = safeFirstName;
+                lazyloadedLocaleData[$"{newTraderId} Nickname"] = nickName;
+                lazyloadedLocaleData[$"{newTraderId} Location"] = location;
+                lazyloadedLocaleData[$"{newTraderId} Description"] = safeDescription;
+
                 return lazyloadedLocaleData;
             });
         }
@@ -80,10 +89,7 @@ public sealed class AddCustomTraderHelper(
     public void OverwriteTraderAssort(string traderId, TraderAssort newAssorts)
     {
         if (!databaseService.GetTables().Traders.TryGetValue(traderId, out var traderToEdit))
-        {
-            logger.Warning($"Unable to update assorts for trader: {traderId}, they could not be found on the server");
             return;
-        }
 
         traderToEdit.Assort = newAssorts;
     }

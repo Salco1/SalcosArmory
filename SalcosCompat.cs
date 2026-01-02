@@ -2,54 +2,38 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Microsoft.Extensions.Logging;
+using SPTarkov.Server.Core.Services;
 using Path = System.IO.Path;
 
 namespace SalcosArmory;
 
 internal static class SalcosCompat
 {
-    public static void Apply(object? databaseService, Assembly assembly, ILogger logger)
+    public static void Apply(DatabaseService databaseService, Assembly assembly)
     {
-        if (databaseService is null)
-        {
+        var modRoot = Path.GetDirectoryName(assembly.Location) ?? "";
+        if (string.IsNullOrWhiteSpace(modRoot))
             return;
-        }
 
-        var baseDir = Path.GetDirectoryName(assembly.Location);
-        if (string.IsNullOrWhiteSpace(baseDir))
-        {
-            return;
-        }
-
-        var weaponsDir = Path.Combine(baseDir, "Weapons");
+        var weaponsDir = Path.Combine(modRoot, "Weapons");
         if (!Directory.Exists(weaponsDir))
-        {
             return;
-        }
 
         var compatById = LoadCompatFromWeapons(weaponsDir);
         if (compatById.Count == 0)
-        {
             return;
-        }
 
-        var itemsDict = TryGetItemsDictionary(databaseService);
-        if (itemsDict is null)
-        {
-            return;
-        }
-
+        var itemsDict = (IDictionary)databaseService.GetTables().Templates.Items;
         ApplyWeaponCompat(itemsDict, compatById);
     }
 
     private static Dictionary<string, SalcosCompatConfig> LoadCompatFromWeapons(string weaponsDir)
     {
         var result = new Dictionary<string, SalcosCompatConfig>(StringComparer.Ordinal);
+
         var files = Directory.GetFiles(weaponsDir, "*.json", SearchOption.TopDirectoryOnly);
         Array.Sort(files, StringComparer.OrdinalIgnoreCase);
 
@@ -58,41 +42,29 @@ internal static class SalcosCompat
             try
             {
                 var json = File.ReadAllText(file);
-                var root = JsonSerializer.Deserialize<Dictionary<string, SalcosCompatItemWrapper>>(
-                    json,
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true,
-                        ReadCommentHandling = JsonCommentHandling.Skip,
-                        AllowTrailingCommas = true
-                    });
-
-                if (root == null)
-                {
+                if (string.IsNullOrWhiteSpace(json))
                     continue;
-                }
 
-                foreach (var kvp in root)
+                var wrapper = JsonSerializer.Deserialize<SalcosCompatItemWrapper>(json, new JsonSerializerOptions
                 {
-                    var id = kvp.Key;
-                    var compat = kvp.Value?.SalcosCompat;
+                    PropertyNameCaseInsensitive = true,
+                    ReadCommentHandling = JsonCommentHandling.Skip,
+                    AllowTrailingCommas = true
+                });
 
-                    if (compat == null || compat.SlotOverrides == null || compat.SlotOverrides.Count == 0)
-                    {
-                        continue;
-                    }
+                var cfg = wrapper?.SalcosCompat;
+                if (cfg == null)
+                    continue;
 
-                    if (string.IsNullOrWhiteSpace(id) || id.Length != 24)
-                    {
-                        continue;
-                    }
+                var id = cfg.Id;
+                if (string.IsNullOrWhiteSpace(id))
+                    continue;
 
-                    result[id] = compat;
-                }
+                result[id] = cfg;
             }
             catch
             {
-                // ignore malformed files
+                // intentionally ignored – compat must never block startup
             }
         }
 
@@ -101,268 +73,107 @@ internal static class SalcosCompat
 
     private static void ApplyWeaponCompat(IDictionary itemsDict, Dictionary<string, SalcosCompatConfig> compatById)
     {
-        var itemsById = BuildItemMap(itemsDict);
+        if (itemsDict.Count == 0 || compatById.Count == 0)
+            return;
 
         foreach (var kvp in compatById)
         {
-            var tplId = kvp.Key;
-            var compat = kvp.Value;
-
-            if (!itemsById.TryGetValue(tplId, out var item))
-            {
+            if (!itemsDict.Contains(kvp.Key))
                 continue;
-            }
 
-            if (compat.SlotOverrides == null || compat.SlotOverrides.Count == 0)
-            {
-                continue;
-            }
-
-            ApplySlotOverrides(item, compat.SlotOverrides);
-        }
-    }
-
-    private static Dictionary<string, object> BuildItemMap(IDictionary itemsDict)
-    {
-        var result = new Dictionary<string, object>(StringComparer.Ordinal);
-
-        foreach (DictionaryEntry entry in itemsDict)
-        {
-            var keyStr = entry.Key as string;
-            var item = entry.Value;
+            var item = itemsDict[kvp.Key];
             if (item == null)
-            {
                 continue;
-            }
 
-            if (!string.IsNullOrWhiteSpace(keyStr))
-            {
-                result[keyStr] = item;
-            }
+            var overrides = kvp.Value.SlotOverrides;
+            if (overrides is null || overrides.Count == 0)
+                continue;
 
-            var idObj = GetMemberValue(item, "Id") ?? GetMemberValue(item, "_id");
-            var idStr = idObj?.ToString();
-            if (!string.IsNullOrWhiteSpace(idStr))
-            {
-                result[idStr] = item;
-            }
+            ApplySlotOverrides(item, overrides);
         }
-
-        return result;
     }
 
-    private static IDictionary? TryGetItemsDictionary(object? source)
+    private static void ApplySlotOverrides(object templateItem, List<SalcosSlotOverride> overrides)
     {
-        if (source is null)
-        {
-            return null;
-        }
-
-        var directItems = GetMemberValue(source, "Items") ?? GetMemberValue(source, "items");
-        if (directItems is IDictionary directDict)
-        {
-            return directDict;
-        }
-
-        var templates = GetMemberValue(source, "Templates") ?? GetMemberValue(source, "templates");
-        if (templates != null)
-        {
-            var templItems = GetMemberValue(templates, "Items") ?? GetMemberValue(templates, "items");
-            if (templItems is IDictionary templDict)
-            {
-                return templDict;
-            }
-        }
-
-        var tables = GetMemberValue(source, "Tables") ?? GetMemberValue(source, "tables");
-        if (tables != null)
-        {
-            var templates2 = GetMemberValue(tables, "Templates") ?? GetMemberValue(tables, "templates");
-            if (templates2 != null)
-            {
-                var templItems2 = GetMemberValue(templates2, "Items") ?? GetMemberValue(templates2, "items");
-                if (templItems2 is IDictionary templDict2)
-                {
-                    return templDict2;
-                }
-            }
-        }
-
-        var tablesFromMethod = GetMemberValue(source, "GetTables") ?? GetMemberValue(source, "getTables");
-        if (tablesFromMethod != null && !ReferenceEquals(tablesFromMethod, source))
-        {
-            return TryGetItemsDictionary(tablesFromMethod);
-        }
-
-        return null;
-    }
-
-    private static bool ApplySlotOverrides(object templateItem, List<SalcosSlotOverride> overrides)
-    {
-        if (overrides == null || overrides.Count == 0)
-        {
-            return false;
-        }
-
-        var props = GetMemberValue(templateItem, "Properties") ?? GetMemberValue(templateItem, "_props");
+        var props = GetMemberValue(templateItem, "_props") ?? GetMemberValue(templateItem, "Properties");
         if (props == null)
-        {
-            return false;
-        }
-
-        var slots = new List<object>();
+            return;
 
         var slotsObj = GetMemberValue(props, "Slots") ?? GetMemberValue(props, "slots");
+        var slots = new List<object>();
+
         if (slotsObj is IEnumerable slotsEnum && slotsObj is not string)
         {
             foreach (var s in slotsEnum)
-            {
-                if (s != null)
-                {
-                    slots.Add(s);
-                }
-            }
+                if (s != null) slots.Add(s);
         }
 
         var chambersObj = GetMemberValue(props, "Chambers") ?? GetMemberValue(props, "chambers");
         if (chambersObj is IEnumerable chambersEnum && chambersObj is not string)
         {
             foreach (var c in chambersEnum)
-            {
-                if (c != null)
-                {
-                    slots.Add(c);
-                }
-            }
+                if (c != null) slots.Add(c);
         }
 
         if (slots.Count == 0)
-        {
-            return false;
-        }
-
-        var changed = false;
+            return;
 
         foreach (var ov in overrides)
         {
-            if (ov == null || string.IsNullOrWhiteSpace(ov.SlotName) || ov.FilterTpls == null || ov.FilterTpls.Count == 0)
-            {
+            if (string.IsNullOrWhiteSpace(ov.SlotName))
                 continue;
-            }
 
-            var slotNameTarget = ov.SlotName.Trim();
-
-            var targetSlots = slots
-                .Where(slot => string.Equals(GetSlotName(slot), slotNameTarget, StringComparison.OrdinalIgnoreCase))
-                .ToList();
-
-            if (targetSlots.Count == 0)
-            {
-                var wantChamber = slotNameTarget.Contains("chamber", StringComparison.OrdinalIgnoreCase) ||
-                                  slotNameTarget.Contains("patron", StringComparison.OrdinalIgnoreCase);
-                var wantMag = slotNameTarget.Contains("mag", StringComparison.OrdinalIgnoreCase);
-
-                foreach (var slot in slots)
-                {
-                    var name = GetSlotName(slot);
-                    if (string.IsNullOrWhiteSpace(name))
-                    {
-                        continue;
-                    }
-
-                    var lower = name.ToLowerInvariant();
-                    if (wantMag && lower.Contains("mag"))
-                    {
-                        targetSlots.Add(slot);
-                    }
-                    else if (wantChamber && (lower.Contains("chamber") || lower.Contains("patron")))
-                    {
-                        targetSlots.Add(slot);
-                    }
-                }
-            }
-
-            if (targetSlots.Count == 0)
-            {
+            var slot = FindSlotByName(slots, ov.SlotName);
+            if (slot == null)
                 continue;
-            }
 
-            foreach (var slot in targetSlots)
-            {
-                if (ApplyToSingleSlot(slot, ov))
-                {
-                    changed = true;
-                }
-            }
+            ApplySlotOverride(slot, ov);
         }
-
-        return changed;
     }
 
-    private static bool ApplyToSingleSlot(object slot, SalcosSlotOverride ov)
+    private static object? FindSlotByName(List<object> slots, string slotName)
     {
-        var propsOwner = GetMemberValue(slot, "Properties") ??
-                         GetMemberValue(slot, "properties") ??
-                         GetMemberValue(slot, "_props") ??
-                         GetMemberValue(slot, "Props") ??
-                         GetMemberValue(slot, "props") ??
-                         slot;
-
-        var filtersObj = GetMemberValue(propsOwner, "Filters") ?? GetMemberValue(propsOwner, "filters");
-        if (filtersObj is not IEnumerable filtersEnum || filtersObj is string)
+        foreach (var slot in slots)
         {
-            return false;
+            var name = (GetMemberValue(slot, "_name") ?? GetMemberValue(slot, "Name"))?.ToString();
+            if (name == null)
+                continue;
+
+            if (string.Equals(name, slotName, StringComparison.OrdinalIgnoreCase))
+                return slot;
         }
 
-        object? firstFilter = null;
-        foreach (var f in filtersEnum)
-        {
-            if (f != null)
-            {
-                firstFilter = f;
-                break;
-            }
-        }
+        return null;
+    }
 
-        IList? filtersList = null;
-        if (filtersObj is IList list)
-        {
-            filtersList = list;
-        }
+    private static void ApplySlotOverride(object slot, SalcosSlotOverride ov)
+    {
+        var props = GetMemberValue(slot, "_props") ?? GetMemberValue(slot, "Properties");
+        if (props == null)
+            return;
 
+        var filtersObj = GetMemberValue(props, "filters") ?? GetMemberValue(props, "Filters");
+        if (filtersObj is not IList filters || filters.Count == 0)
+            return;
+
+        var firstFilter = filters[0];
         if (firstFilter == null)
+            return;
+
+        var filterTplsObj = GetMemberValue(firstFilter, "Filter") ?? GetMemberValue(firstFilter, "filter");
+        var filterTpls = EnsureStringList(firstFilter, "Filter", filterTplsObj);
+        if (filterTpls == null)
+            return;
+
+        if (ov.FilterTpls != null && ov.FilterTpls.Count > 0)
         {
-            if (filtersList == null)
+            foreach (var tpl in ov.FilterTpls)
             {
-                return false;
-            }
+                if (string.IsNullOrWhiteSpace(tpl))
+                    continue;
 
-            var elementType = filtersList.GetType().IsGenericType
-                ? filtersList.GetType().GetGenericArguments().FirstOrDefault() ?? typeof(object)
-                : typeof(object);
-
-            firstFilter = Activator.CreateInstance(elementType);
-            if (firstFilter == null)
-            {
-                return false;
-            }
-
-            filtersList.Add(firstFilter);
-        }
-
-        var filterListObj = GetMemberValue(firstFilter, "Filter") ?? GetMemberValue(firstFilter, "filter");
-        var filterList = EnsureStringList(firstFilter, "Filter", filterListObj);
-        if (filterList == null)
-        {
-            return false;
-        }
-
-        filterList.Clear();
-        foreach (var tpl in ov.FilterTpls!)
-        {
-            if (!string.IsNullOrWhiteSpace(tpl))
-            {
-                filterList.Add(tpl);
+                if (!ContainsString(filterTpls, tpl))
+                    filterTpls.Add(tpl);
             }
         }
 
@@ -370,116 +181,80 @@ internal static class SalcosCompat
         {
             var excludedObj = GetMemberValue(firstFilter, "ExcludedFilter") ?? GetMemberValue(firstFilter, "excludedFilter");
             var excludedList = EnsureStringList(firstFilter, "ExcludedFilter", excludedObj);
-            if (excludedList != null)
-            {
-                excludedList.Clear();
-            }
+            excludedList?.Clear();
         }
-
-        return true;
     }
 
-    private static object? GetMemberValue(object target, string name)
+    private static bool ContainsString(IList list, string value)
     {
-        var type = target.GetType();
-
-        var prop = type.GetProperty(
-            name,
-            BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase
-        );
-        if (prop != null)
+        foreach (var x in list)
         {
-            return SafeGet(() => prop.GetValue(target));
+            if (x == null)
+                continue;
+
+            if (string.Equals(x.ToString(), value, StringComparison.OrdinalIgnoreCase))
+                return true;
         }
 
-        var field = type.GetField(
-            name,
-            BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase
-        );
-        if (field != null)
-        {
-            return SafeGet(() => field.GetValue(target));
-        }
+        return false;
+    }
 
-        var method = type.GetMethod(
-            name,
-            BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic
-        );
-        if (method != null && method.GetParameters().Length == 0)
+    private static object? GetMemberValue(object? obj, string name)
+    {
+        if (obj == null)
+            return null;
+
+        try
         {
-            return SafeGet(() => method.Invoke(target, null));
+            var t = obj.GetType();
+
+            var prop = t.GetProperty(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
+            if (prop != null)
+                return prop.GetValue(obj);
+
+            var field = t.GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
+            if (field != null)
+                return field.GetValue(obj);
+        }
+        catch
+        {
+            // ignore
         }
 
         return null;
     }
 
-    private static string? GetSlotName(object slot)
-    {
-        var nameObj = GetMemberValue(slot, "Name") ??
-                      GetMemberValue(slot, "_name") ??
-                      GetMemberValue(slot, "SlotName");
-
-        return nameObj?.ToString();
-    }
-
     private static IList? EnsureStringList(object owner, string propName, object? current)
     {
         if (current is IList list)
-        {
             return list;
-        }
 
-        var type = owner.GetType();
-        var flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
+        var created = new List<string>();
+        TrySetMemberValue(owner, propName, created);
+        TrySetMemberValue(owner, propName.ToLowerInvariant(), created);
+        return created;
+    }
 
-        var pi = type.GetProperty(propName, flags);
-        if (pi == null)
+    private static void TrySetMemberValue(object obj, string name, object? value)
+    {
+        try
         {
-            foreach (var p in type.GetProperties(flags))
+            var t = obj.GetType();
+
+            var prop = t.GetProperty(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
+            if (prop != null && prop.CanWrite)
             {
-                if (string.Equals(p.Name, propName, StringComparison.OrdinalIgnoreCase))
-                {
-                    pi = p;
-                    break;
-                }
+                prop.SetValue(obj, value);
+                return;
             }
-        }
 
-        if (pi == null)
-        {
-            return null;
-        }
-
-        var listInstance = (IList?)Activator.CreateInstance(typeof(List<string>));
-        if (listInstance == null)
-        {
-            return null;
-        }
-
-        SafeSet(() => pi.SetValue(owner, listInstance));
-        return listInstance;
-    }
-
-    private static object? SafeGet(Func<object?> getter)
-    {
-        try
-        {
-            return getter();
+            var field = t.GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
+            if (field != null)
+                field.SetValue(obj, value);
         }
         catch
         {
-            return null;
-        }
-    }
-
-    private static void SafeSet(Action setter)
-    {
-        try
-        {
-            setter();
-        }
-        catch
-        {
+            // ignore
         }
     }
 }
@@ -492,6 +267,9 @@ internal sealed class SalcosCompatItemWrapper
 
 internal sealed class SalcosCompatConfig
 {
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
     [JsonPropertyName("slotOverrides")]
     public List<SalcosSlotOverride>? SlotOverrides { get; set; }
 }
