@@ -1,0 +1,28 @@
+{
+  "6946ebb44e3088ef0bb4dfbe": {
+    "itemTplToClone": "6570e83223c1f638ef0b0ede",
+    "parentId": "65649eb40bf0ed77b8044453",
+    "handbookParentId": "5b5f704686f77447ec5d76d7",
+
+    "overrideProperties": {
+      "armorClass": "4",
+      "Durability": 40,
+      "MaxDurability": 40,
+      "BluntThroughput": 0.32
+    },
+
+    "locales": {
+      "en": {
+        "name": "",
+        "shortName": "",
+        "description": ""
+      }
+    },
+
+    "fleaPriceRoubles": 1,
+    "handbookPriceRoubles": 1,
+    "addtoBots": false,
+    "addtoTraders": false,
+    "addtoStaticLootContainers": false
+  }
+}

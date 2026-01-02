@@ -1,0 +1,52 @@
+{
+  "694838528afce776527763af": {
+    "itemTplToClone": "628d0618d1ba6e4fa07ce5a4",
+    "parentId": "5448e5284bdc2dcb718b4567",
+    "handbookParentId": "5b5f704686f77447ec5d76d7",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "BlocksArmorVest": true,
+      "ArmorType": "Light",
+      "ArmorMaterial": "Aramid",
+      "BluntThroughput": 0.2403,
+      "mousePenalty": -2,
+      "speedPenaltyPercent": -4,
+      "weaponErgonomicPenalty": -3,
+      "CanPutIntoDuringTheRaid": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
+      "RarityPvE": "Superrare",
+      "RepairCost": 725,
+      "RepairSpeed": 0,
+      "HideEntrails": true,
+	  "Height": 4,
+      "QuestItem": false,
+      "InsuranceDisabled": false,
+      "IsUnbuyable": false,
+      "IsUnsaleable": false,
+      "Unlootable": false,
+      "UnlootableFromSide": [],
+      "UnlootableFromSlot": "FirstPrimaryWeapon",
+	  "Width": 3,
+	  "Weight": 4.2,
+      "ConflictingItems": [],
+      "CantRemoveFromSlotsDuringRaid": [],
+      "Prefab": {
+        "path": "assets/content/items/equipment/rig_stich_profi_plate_carrier_v2/item_equipment_rig_stich_profi_plate_carrier_v2.bundle",
+        "rcid": ""
+      }
+    },
+    "locales": {
+      "en": {
+        "name": "NPP KIASS Stich Profi plate carrier (black)",
+        "shortName": "NPPStich",
+        "description": "Enhanced by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 250000,
+    "handbookPriceRoubles": 125000,
+    "addtoBots": true,
+    "addtoStaticLootContainers": false,
+    "addtoTraders": false
+  }
+}

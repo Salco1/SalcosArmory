@@ -22,7 +22,9 @@
       "MaxFragmentsCount": 1,
       "MinFragmentsCount": 1,
       "MisfireChance": 0.01,
-      "RicochetChance": 0
+      "RicochetChance": 0,
+	  "CanSellOnRagfair": false,
+      "CanRequireOnRagfair": false
     },
     "locales": {
       "en": {
@@ -31,8 +33,8 @@
         "description": "HCTB stands for -Here Comes The Boom-. This grenade is a modified version of the 40x46mm M381 (HE). Modified by ODIN."
       }
     },
-    "fleaPriceRoubles": 666666,
-    "handbookPriceRoubles": 666666,
+    "fleaPriceRoubles": 54544,
+    "handbookPriceRoubles": 17125,
     "addtoBots": true,
     "addCaliberToAllCloneLocations": true,
     "addtoStaticAmmo": true,
@@ -42,63 +44,63 @@
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_BURIED_BARREL_CACHE",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_CIVILIAN_BODY",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV_4X4_2",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_PMC_BODY",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_SCAV_BODY",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 1001
+        "probability": 877
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 1001
+        "probability": 877
       }
     ]
   }

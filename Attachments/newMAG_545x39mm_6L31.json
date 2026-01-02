@@ -33,35 +33,35 @@
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 4350
+        "probability": 750
       }
     ]
   }

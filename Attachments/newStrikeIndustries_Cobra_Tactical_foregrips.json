@@ -1,31 +1,30 @@
 {
-  "69138b25672be00a9f74eef0": {
-    "itemTplToClone": "5cf50850d7f00c056e24104c",
-    "parentId": "55818a684bdc2ddd698b456d",
-    "handbookParentId": "5b5f761f86f774094242f1a1",
+  "69504b9b7bad9d88fecf8ab3": {
+    "itemTplToClone": "5c791e872e2216001219c40a",
+    "parentId": "55818af64bdc2d5b648b4570",
+    "handbookParentId": "5b5f71de86f774093f2ecf13",
     "overrideProperties": {
-      "Accuracy": 0.5,
+      "Accuracy": 2,
       "BackgroundColor": "violet",
-      "Ergonomics": 14,
+      "Ergonomics": 15,
       "ConflictingItems": [],
       "CanRequireOnRagfair": false,
       "CanSellOnRagfair": false,
-      "Recoil": -0.5,
-      "RarityPvE": "Rare"
+      "Recoil": -4
     },
     "locales": {
       "en": {
-        "name": "AK Strike Industries Enhanced Pistol Grip (Black) - #V2",
-        "shortName": "AKEPG V2",
+        "name": "Strike Industries Cobra Tactical foregrip (black) - #V2",
+        "shortName": "SI Cobra V2",
         "description": "Enhanced by ODIN."
       }
     },
-    "fleaPriceRoubles": 38544,
-    "handbookPriceRoubles": 17775,
+    "fleaPriceRoubles": 33544,
+    "handbookPriceRoubles": 17845,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_pistol_grip"
+      "mod_foregrip"
     ],
     "addtoStaticLootContainers": true,
     "staticLootContainers": [
@@ -68,33 +67,32 @@
     ],
     "addtoTraders": false
   },
-  "69138b1e01e5b709ab3a47b8": {
-    "itemTplToClone": "5cf508bfd7f00c056e24104e",
-    "parentId": "55818a684bdc2ddd698b456d",
-    "handbookParentId": "5b5f761f86f774094242f1a1",
+  "69504ba51d8e56ec2ac592d7": {
+    "itemTplToClone": "655dccfdbdcc6b5df71382b6",
+    "parentId": "55818af64bdc2d5b648b4570",
+    "handbookParentId": "5b5f71de86f774093f2ecf13",
     "overrideProperties": {
-      "Accuracy": 0.5,
+      "Accuracy": 2,
       "BackgroundColor": "violet",
-      "Ergonomics": 14,
+      "Ergonomics": 15,
       "ConflictingItems": [],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
-      "Recoil": -0.5,
-      "RarityPvE": "Rare"
+      "Recoil": -4
     },
     "locales": {
       "en": {
-        "name": "AK Strike Industries Enhanced Pistol Grip (FDE) - #V2",
-        "shortName": "AKEPG V2",
+        "name": "Strike Industries Cobra Tactical foregrip (FDE) - #V2",
+        "shortName": "SI Cobra V2",
         "description": "Enhanced by ODIN."
       }
     },
-    "fleaPriceRoubles": 38544,
-    "handbookPriceRoubles": 17775,
+    "fleaPriceRoubles": 33544,
+    "handbookPriceRoubles": 17845,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_pistol_grip"
+      "mod_foregrip"
     ],
     "addtostaticLootContainers": true,
     "staticLootContainers": [

@@ -1,0 +1,77 @@
+{
+  "69482adbf50c250237bc55c3": {
+    "itemTplToClone": "6570aead4d84f81fd002a033",
+    "parentId": "5a341c4686f77469e155819e",
+    "handbookParentId": "5b47574386f77428ca22b32f",
+    "overrideProperties": {
+      "armorClass": 5,
+      "BackgroundColor": "violet",
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
+      "Durability": 30,
+      "MaxDurability": 30,
+      "ConflictingItems": [],
+      "BlocksHeadwear": false,
+      "RarityPvE": "Superrare"
+    },
+    "locales": {
+      "en": {
+        "name": "Death Shadow lightweight armored mask - #Reinforced",
+        "shortName": "Death Shadow",
+        "description": "Reinforced by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 330500,
+    "handbookPriceRoubles": 72544,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "staticLootContainers": [
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV_4X4_2"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_FESTIVE_AIRDROP_SUPPLY_CRATE"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_PMC_BODY"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_SCAV_BODY"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
+      }
+    ],
+    "addtoTraders": false
+  }
+}

@@ -7,8 +7,8 @@
       "Accuracy": 1,
       "BackgroundColor": "violet",
       "ConflictingItems": [],
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
       "Ergonomics": 1,
       "Recoil": 0,
       "Slots": [
@@ -52,7 +52,10 @@
                   "6389f1dfc879ce63f72fc43e",
                   "647dba3142c479dde701b654",
                   "647dd2b8a12ebf96c3031655",
-                  "69349c85ac93ec3de7278c21"
+                  "69349c85ac93ec3de7278c21",
+				  
+				  "6086b5731246154cad35d6c7",
+				  "5f63418ef5750b524b45f116"
                 ],
                 "Shift": 0
               }
@@ -66,8 +69,8 @@
     },
     "locales": {
       "en": {
-        "name": "AK-74 gas tube - #Rev. 2",
-        "shortName": "AK-74 gas Rev.2",
+        "name": "AK-74 gas tube - #V2",
+        "shortName": "AK-74 gas V2",
         "description": "Enhanced by ODIN."
       }
     },
@@ -78,43 +81,43 @@
     "modSlot": [
       "mod_gas_block"
     ],
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 4350
+        "probability": 750
       }
     ],
     "addtoTraders": false

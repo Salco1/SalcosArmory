@@ -9,62 +9,62 @@
       "DurabilityBurnModificator": 1.05,
       "Ergonomics": -1.5,
       "ConflictingItems": [],
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
       "RarityPvE": "Rare",
       "Recoil": -7
     },
     "locales": {
       "en": {
-        "name": "AR-15 SureFire SF4P 5.56x45 flash hider - #Rev. 2",
-        "shortName": "SF4P R2",
+        "name": "AR-15 SureFire SF4P 5.56x45 flash hider - #V2",
+        "shortName": "SF4P V2",
         "description": "Enhanced by ODIN."
       }
     },
     "fleaPriceRoubles": 33211,
-    "handbookPriceRoubles": 16544,
+    "handbookPriceRoubles": 12444,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
       "mod_muzzle"
     ],
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 4350
+        "probability": 750
       }
     ],
     "addtoTraders": false

@@ -6,7 +6,13 @@
     "overrideProperties": {
       "BackgroundColor": "violet",
       "Ergonomics": -3,
-      "ConflictingItems": [],
+      "ConflictingItems": [
+	    "5dcbd56fdbd3d91b3e5468d5",
+		"676176d362e0497044079f4c",
+		"65290f395ae2ae97b80fdf2d",
+		"5df8ce05b11454561e39243b",
+		"5a367e5dc4a282000e49738f"
+	  ],
       "CanRequireOnRagfair": true,
       "CanSellOnRagfair": true,
       "Cartridges": [
@@ -48,43 +54,43 @@
     "modSlot": [
       "mod_magazine"
     ],
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 4350
+        "probability": 750
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 4350
+        "probability": 750
       }
     ],
     "addtoTraders": false

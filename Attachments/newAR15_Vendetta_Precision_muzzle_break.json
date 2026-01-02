@@ -1,35 +1,33 @@
 {
-  "693eaa5b4015878f9ce091fc": {
-    "itemTplToClone": "59c1383d86f774290a37e0ca",
-    "parentId": "5448bc234bdc2d3c308b4569",
-    "handbookParentId": "5b5f754a86f774094242f19b",
+  "69517912aaa4e604f966fe6e": {
+    "itemTplToClone": "5a7c147ce899ef00150bd8b8",
+    "parentId": "550aa4bf4bdc2dd6348b456b",
+    "handbookParentId": "5b5f724c86f774093f2ecf15",
     "overrideProperties": {
+      "Accuracy": 2,
       "BackgroundColor": "violet",
-      "Ergonomics": -8,
       "ConflictingItems": [],
       "CanRequireOnRagfair": false,
       "CanSellOnRagfair": false,
-      "CheckTimeModifier": 10,
-      "RarityPvE": "Rare",
-      "LoadUnloadModifier": 12,
-      "MalfunctionChance": 0.023
+      "Ergonomics": -2,
+      "Recoil": -11,
+	  "Velocity": 1
     },
     "locales": {
       "en": {
-        "name": "AR-15 5.56x45/.300 BLK Magpul PMAG D-60 STANAG 60-round magazine - #V2",
-        "shortName": "D60 V2",
+        "name": "AR-15 Vendetta Precision VP-09 Interceptor 5.56x45 muzzle brake - #V2",
+        "shortName": "VP-09 V2",
         "description": "Enhanced by ODIN."
       }
     },
-    "fleaPriceRoubles": 72654,
-    "handbookPriceRoubles": 63942,
+    "fleaPriceRoubles": 52647,
+    "handbookPriceRoubles": 32111,
     "addtoBots": true,
     "addtoModSlots": true,
     "modSlot": [
-      "mod_magazine"
+      "mod_muzzle"
     ],
     "addtoStaticLootContainers": true,
-    "addtoTraders": false,
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
@@ -52,6 +50,10 @@
         "probability": 750
       },
       {
+        "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
+        "probability": 750
+      },
+      {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
         "probability": 750
       },
@@ -63,6 +65,7 @@
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
         "probability": 750
       }
-    ]
+    ],
+    "addtoTraders": false
   }
 }

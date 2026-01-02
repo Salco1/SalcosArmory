@@ -1,0 +1,227 @@
+{
+  "6957ca19c150c0264c5b5f73": {
+    "itemTplToClone": "5ea05cf85ad9772e6624305d",
+    "parentId": "5a341c4086f77401f2541505",
+    "handbookParentId": "5ea05cf85ad9772e6624305d",
+    "overrideProperties": {
+      "armorClass": 5,
+      "ArmorType": "Heavy",
+      "BackgroundColor": "violet",
+      "RepairCost": 855,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
+      "Durability": 45,
+      "MaxDurability": 45,
+      "ConflictingItems": [],
+      "BlocksHeadwear": false,
+      "mousePenalty": -2,
+      "weaponErgonomicPenalty": -2,
+      "RarityPvE": "Superrare",
+      "Slots": [
+        {
+          "_name": "mod_equipment_000",
+          "_id": "6957d0c1e7eb1939c0c3f822",
+          "_parent": "6957ca19c150c0264c5b5f73",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5a16badafcdbcb001865f72d",
+                  "5a16b672fcdbcb001912fa83",
+                  "5a16b7e1fcdbcb00165aa6c9"
+                ],
+                "Shift": 0
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        },
+        {
+          "_name": "mod_nvg",
+          "_id": "6957d0c95385c063638d5b96",
+          "_parent": "6957ca19c150c0264c5b5f73",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5ea058e01dbce517f324b3e2",
+                  "5c0558060db834001b735271",
+                  "5a16b8a9fcdbcb00165aa6ca",
+				  "6957c31de7714caddbf7acb0"
+                ],
+                "Shift": 0
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        },
+        {
+          "_name": "mod_mount",
+          "_id": "6957d0cc5e5278fb453d7b1c",
+          "_parent": "6957ca19c150c0264c5b5f73",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5a398b75c4a282000a51a266",
+                  "5a398ab9c4a282000c5a9842"
+                ],
+                "Shift": 0
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        },
+        {
+          "_name": "mod_equipment_001",
+          "_id": "6957d0d1a5a7d3ad5255f224",
+          "_parent": "6957ca19c150c0264c5b5f73",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5a16b9fffcdbcb0176308b34"
+                ],
+                "Shift": 0
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        },
+        {
+          "_name": "mod_equipment_002",
+          "_id": "6957d0d51193667405e75816",
+          "_parent": "6957ca19c150c0264c5b5f73",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "5c0e66e2d174af02a96252f4"
+                ],
+                "Shift": 0
+              }
+            ]
+          },
+          "_required": false,
+          "_mergeSlotWithChildren": false,
+          "_proto": "55d30c4c4bdc2db4468b457e"
+        },
+        {
+          "_name": "Helmet_top",
+          "_id": "6957d0d996c3cf134bd31ce5",
+          "_parent": "6957ca19c150c0264c5b5f73",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "657ba2eef58ba5a625010798"
+                ],
+                "Plate": "657ba2eef58ba5a625010798",
+                "armorColliders": [
+                  "ParietalHead"
+                ],
+                "armorPlateColliders": [],
+                "bluntDamageReduceFromSoftArmor": false,
+                "locked": true
+              }
+            ]
+          },
+          "_required": true,
+          "_mergeSlotWithChildren": true,
+          "_proto": "64479fdf9731c8fadc0642c1"
+        },
+        {
+          "_name": "Helmet_back",
+          "_id": "6957d0df940e20e81f30eb27",
+          "_parent": "6957ca19c150c0264c5b5f73",
+          "_props": {
+            "filters": [
+              {
+                "Filter": [
+                  "657ba34b9ba22f103e08139b"
+                ],
+                "Plate": "657ba34b9ba22f103e08139b",
+                "armorColliders": [
+                  "BackHead"
+                ],
+                "armorPlateColliders": [],
+                "bluntDamageReduceFromSoftArmor": false,
+                "locked": true
+              }
+            ]
+          },
+          "_required": true,
+          "_mergeSlotWithChildren": true,
+          "_proto": "64479fdf9731c8fadc0642c1"
+        }
+      ]
+    },
+    "locales": {
+      "en": {
+        "name": "Tac-Kek FAST MT helmet - #Reinforced",
+        "shortName": "TK FAST MT",
+        "description": "Reinforced by ODIN."
+      }
+    },
+    "fleaPriceRoubles": 254455,
+    "handbookPriceRoubles": 120544,
+    "addtoBots": true,
+    "addtoModSlots": true,
+    "addtoStaticLootContainers": true,
+    "staticLootContainers": [
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV_4X4_2"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_FESTIVE_AIRDROP_SUPPLY_CRATE"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_PMC_BODY"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_SCAV_BODY"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5"
+      },
+      {
+        "probability": 420,
+        "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3"
+      }
+    ],
+    "addtoTraders": false
+  }
+}

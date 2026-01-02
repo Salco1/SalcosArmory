@@ -1,0 +1,26 @@
+{
+  "6946eb7e67ba8110a6ddfd5e": {
+    "itemTplToClone": "544a5caa4bdc2d1a388b4568",
+    "parentId": "5448e5284bdc2dcb718b4567",
+    "handbookParentId": "5b5f6f8786f77447ed563642",
+    "overrideProperties": {
+      "BackgroundColor": "violet",
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false
+    },
+
+    "locales": {
+      "en": {
+        "name": "Crye Precision AVS plate carrier (Ranger Green) - #V2",
+        "shortName": "AVS V2",
+        "description": "Enhanced by ODIN."
+      }
+    },
+
+    "fleaPriceRoubles": 280000,
+    "handbookPriceRoubles": 58629,
+    "addtoBots": true,
+    "addtoTraders": false,
+    "addtoStaticLootContainers": false
+  }
+}
