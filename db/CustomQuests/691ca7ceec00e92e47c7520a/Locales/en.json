@@ -1,5 +1,5 @@
 {
-  "694115a7b55f2ad8de31c145": "TO-DO: Hand over 25000 roubles",
+  "694115a7b55f2ad8de31c145": "Hand over 25000 roubles",
   "694115a7b55f2ad8de31c144 name": "Wer zum...?",
   "694115a7b55f2ad8de31c144 description": "Hey! Schon mal was von anklopfen gehört?\nUnd wer zur Hölle bist du und was willst du hier?\n\nOh! Du verstehst nicht was ich sagen, huh?\nEnglisch? Yeah? Good!\nAgain: WHAT THE FUCK YOU WANT?\nA job? I don't even know you? How the fuck I know I can trust you?\n\nOkay, here's the deal: Hand over 25000 Roubles and I'm doing some research on you.\nIf my people find out that you are trustworthy, we'll talk about business.\n\nNow leave!",
   "694115a7b55f2ad8de31c144 note": "",
@@ -10,8 +10,8 @@
   "694115a7b55f2ad8de31c144 declinePlayerMessage": "declinePlayerMessage",
   "694115a7b55f2ad8de31c144 completePlayerMessage": "completePlayerMessage",
   "694115a7b55f2ad8de31c144 changeQuestMessageText": "changeQuestMessageText",
-  "765f2090b3c55c0b87157ee7": "TO-DO: Hand over dog tags",
-  "cbeb43cf79da2dd30acfcf8f": "TO-DO: Hand over 15 PMC found in raid dogtags (Level 20+)",
+  "765f2090b3c55c0b87157ee7": "Kill 15 PMCs",
+  "cbeb43cf79da2dd30acfcf8f": "Hand over 15 PMC found in raid dogtags (Level 20+)",
   "6941c16f983123c216f584da name": "Bring me their scalps!",
   "6941c16f983123c216f584da description": "My guys have finished the investigation. You seem to be clean and reliable. Good!\nNow for the next part:\n\nLast week I was expecting a delivery. And you know what?\nIt never arrived. And you know why?\nThose damn PMCs out there are ruining my business.\n\nNow go and load your weapon and mow those assholes down.\n\nAnd hey! Don't forget the dog tags. I want 15 of them.",
   "6941c16f983123c216f584da note": "",

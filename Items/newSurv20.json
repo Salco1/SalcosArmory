@@ -5,11 +5,11 @@
     "handbookParentId": "5b47574386f77428ca22b339",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
       "RarityPvE": "Superrare",
       "MaxHpResource": 20,
-      "medUseTime": 15,
+      "medUseTime": 20,
       "Height": 1,
       "Width": 2,
       "effects_damage": {
@@ -42,42 +42,42 @@
     "addtoBots": true,
     "addtoSpecialSlots": true,
     "addtoModSlots": true,
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_MEDCASE"
       },
       {
-        "probability": 3800,
+        "probability": 650,
         "containerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE"
       }
     ],

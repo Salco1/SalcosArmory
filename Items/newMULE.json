@@ -5,16 +5,16 @@
     "handbookParentId": "5b47574386f77428ca22b33a",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
       "medUseTime": 3,
       "MaxHpResource": 3,
       "RarityPvE": "Superrare"
     },
     "locales": {
       "en": {
-        "name": "M.U.L.E. stimulant injector - #Rev. 2",
-        "shortName": "MULE Rev.2",
+        "name": "M.U.L.E. stimulant injector - #V2",
+        "shortName": "MULE V2",
         "description": "Muscular Ultra Large Exciter. It is used to expand the body's abilities before long marches. Developed by ODIN and Sanitar."
       }
     },
@@ -26,39 +26,39 @@
     "addtoTraders": false,
     "staticLootContainers": [
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDCASE"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE"
       }
     ]

@@ -6,8 +6,8 @@
     "overrideProperties": {
       "BackgroundColor": "violet",
       "bFirerate": 600,
-      "CanSellOnRagfair": true,
-      "CanRequireOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
       "ExaminedByDefault": true,
       "weapFireType": [
         "single",
@@ -16,8 +16,8 @@
     },
     "locales": {
       "en": {
-        "name": "SAG AK-545 Short 5.45x39 assault rifle - #Rev. 2",
-        "shortName": "SAGs-R2",
+        "name": "SAG AK-545 Short 5.45x39 assault rifle - #V2",
+        "shortName": "SAGs V2",
         "description": "A modified variant of the SAG AK-545 Short 5.45x39 carbine. Modified by ODIN."
       }
     },
@@ -30,47 +30,47 @@
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 1970
+        "probability": 720
       }
     ]
   }

@@ -5,8 +5,8 @@
     "handbookParentId": "5b5f7a2386f774093f2ed3c4",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "CanSellOnRagfair": true,
-      "CanRequireOnRagfair": true,
+      "CanSellOnRagfair": false,
+      "CanRequireOnRagfair": false,
       "ExaminedByDefault": true,
       "ExplDelay": 1.5,
       "explDelay": 1.5

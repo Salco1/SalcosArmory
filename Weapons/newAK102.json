@@ -5,15 +5,15 @@
     "handbookParentId": "5b5f78fc86f77409407a7f90",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "bFirerate": 720,
-      "CanSellOnRagfair": true,
-      "CanRequireOnRagfair": true,
+      "bFirerate": 750,
+      "CanSellOnRagfair": false,
+      "CanRequireOnRagfair": false,
       "ExaminedByDefault": true
     },
     "locales": {
       "en": {
-        "name": "Kalashnikov AK-102 5.56x45 assault rifle - #Rev. 2",
-        "shortName": "AK-102R2",
+        "name": "Kalashnikov AK-102 5.56x45 assault rifle - #V2",
+        "shortName": "AK-102 V2",
         "description": "A modified variant of the Kalashnikov AK-102. Modified by ODIN."
       }
     },
@@ -26,51 +26,51 @@
     "staticLootContainers": [
       {
         "containerName": "LOOTCONTAINER_DEAD_SCAV",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_LONG_WEAPON_BOX",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_5X5",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_AMMO_BOX_3X3_2",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE",
-        "probability": 1970
+        "probability": 720
       },
       {
         "containerName": "LOOTCONTAINER_WOODEN_CRATE_5X2_2",
-        "probability": 1970
+        "probability": 720
       }
     ]
   }

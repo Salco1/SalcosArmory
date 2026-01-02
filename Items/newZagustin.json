@@ -1,6 +1,6 @@
 {
-  "6919defd80356dd043e9621a": {
-    "itemTplToClone": "5c0e534186f7747fa1419867",
+  "6956bc4eda59956674d9bde3": {
+    "itemTplToClone": "5c0e533786f7747fa23f4d47",
     "parentId": "5448f3a64bdc2d60728b456a",
     "handbookParentId": "5b47574386f77428ca22b33a",
     "overrideProperties": {
@@ -9,34 +9,17 @@
       "CanSellOnRagfair": false,
       "medUseTime": 3,
       "MaxHpResource": 3,
-      "RarityPvE": "Superrare",
-	  "effects_health": {
-      "Energy": {
-        "value": -20
-      }
-    },
-      "effects_damage": {
-        "Pain": {
-          "delay": 0,
-          "duration": 0,
-          "fadeOut": 2
-        },
-        "Pain": {
-          "delay": 0,
-          "duration": 120,
-          "fadeOut": 3
-        }
-      }
+      "RarityPvE": "Superrare"
     },
     "locales": {
       "en": {
-        "name": "eTG-change regenerative stimulant injector - #V2",
-        "shortName": "eTG V2",
-        "description": "A powerful stimulant for regeneration processes. Developed by ODIN and Sanitar."
+        "name": "Zagustin hemostatic drug injector - #V2",
+        "shortName": "Zagustin V2",
+        "description": "A military-issue drug. Inhibits activators of profibrinolysin and slows down its transformation in fibrinolysin. Temporarily stops the bleeding and increases resistance to bloodloss. Has side effects. Leads to severe dehydration. Developed by ODIN and Sanitar."
       }
     },
-    "fleaPriceRoubles": 95654,
-    "handbookPriceRoubles": 54855,
+    "fleaPriceRoubles": 72599,
+    "handbookPriceRoubles": 33540,
     "addtoBots": true,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,

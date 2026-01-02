@@ -5,8 +5,8 @@
     "handbookParentId": "5b47574386f77428ca22b33a",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
       "medUseTime": 3,
       "MaxHpResource": 3,
       "RarityPvE": "Superrare",
@@ -25,8 +25,8 @@
     },
     "locales": {
       "en": {
-        "name": "Propital regenerative stimulant injector - #Rev. 2",
-        "shortName": "Prop. R2",
+        "name": "Propital regenerative stimulant injector - #V2",
+        "shortName": "Prop. V2",
         "description": "A military-issue stimulant permitted to only be used by medical officers and paramedics. Developed by ODIN and Sanitar."
       }
     },
@@ -34,42 +34,42 @@
     "handbookPriceRoubles": 72555,
     "addtoBots": true,
     "addtoModSlots": true,
-    "addtostaticLootContainers": true,
+    "addtoStaticLootContainers": true,
     "staticLootContainers": [
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDCASE"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE"
       }
     ],

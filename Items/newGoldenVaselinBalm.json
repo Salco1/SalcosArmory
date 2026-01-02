@@ -5,8 +5,8 @@
     "handbookParentId": "5b47574386f77428ca22b339",
     "overrideProperties": {
       "BackgroundColor": "violet",
-      "CanRequireOnRagfair": true,
-      "CanSellOnRagfair": true,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
       "MaxHpResource": 10,
       "RarityPvE": "Rare",
       "medUseTime": 6,
@@ -18,8 +18,8 @@
         },
         "Pain": {
           "delay": 0,
-          "duration": 500,
-          "fadeOut": 2
+          "duration": 540,
+          "fadeOut": 1
         },
         "RadExposure": {
           "delay": 0,
@@ -29,7 +29,7 @@
       },
       "effects_health": {
         "Energy": {
-          "value": -19
+          "value": -15
         }
       },
       "hpResourceRate": 0,
@@ -43,7 +43,7 @@
       }
     },
     "fleaPriceRoubles": 62555,
-    "handbookPriceRoubles": 45000,
+    "handbookPriceRoubles": 45888,
     "addtoBots": true,
     "addtoModSlots": true,
     "addtoStaticLootContainers": true,
@@ -51,39 +51,39 @@
     "addtoTraders": false,
     "staticLootContainers": [
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DEAD_SCAV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_AIRDROP_MEDICAL_CRATE"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_DUFFLE_BAG_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_LAB_TECHNICIAN_BODY"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDBAG_SMU06_ADV"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDCASE"
       },
       {
-        "probability": 3800,
+        "probability": 755,
         "containerName": "LOOTCONTAINER_MEDICAL_SUPPLY_CRATE"
       }
     ]
