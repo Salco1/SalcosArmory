@@ -32,7 +32,7 @@ internal static class OdinAssortLoader
         return result;
     }
 
-    // Legacy API kept for compatibility
+
     public static JsonObject MergeAssortFromDataFolders(JsonObject? baseAssort, string traderFolderPath)
     {
         var merged = CreateEmptyAssort();
@@ -103,7 +103,7 @@ internal static class OdinAssortLoader
         {
             foreach (var item in fragItems)
             {
-                // Only accept objects; always DeepClone to avoid parent ownership issues
+
                 if (item is JsonObject)
                     itemsTarget.Add(item.DeepClone());
             }
@@ -130,19 +130,13 @@ internal static class OdinAssortLoader
         }
     }
 
-    /// <summary>
-    /// Ensures:
-    /// - items[] contains ONLY JsonObject entries
-    /// - each item has a valid MongoId _id (24 hex)
-    /// - references are consistent:
-    ///     items[*].parentId, barter_scheme keys, loyal_level_items keys
-    /// </summary>
+
     private static void NormalizeAndRepairAssortIds(JsonObject assortRoot)
     {
         if (assortRoot["items"] is not JsonArray items)
             return;
 
-        // IMPORTANT: Build a new array with DeepClone() nodes to avoid "node already has a parent"
+
         var cleanedItems = new JsonArray();
         foreach (var node in items)
         {
@@ -157,7 +151,7 @@ internal static class OdinAssortLoader
         var idMap = new Dictionary<string, string>(StringComparer.Ordinal);
         var used = new HashSet<string>(StringComparer.Ordinal);
 
-        // Pass 1: repair/ensure _id is valid and unique
+
         for (var i = 0; i < cleanedItems.Count; i++)
         {
             if (cleanedItems[i] is not JsonObject itemObj)
@@ -165,7 +159,7 @@ internal static class OdinAssortLoader
 
             var rawId = GetNodeAsString(itemObj, "_id");
 
-            // Handle {"$oid":"..."} style if present
+
             if (!IsValidMongoId(rawId))
             {
                 var extracted = ExtractOidIfPresent(itemObj["_id"]);
@@ -184,7 +178,7 @@ internal static class OdinAssortLoader
             }
             else
             {
-                // Ensure uniqueness
+
                 if (!used.Add(rawId))
                 {
                     var newId = GenerateMongoId(used);
@@ -198,7 +192,7 @@ internal static class OdinAssortLoader
                 }
             }
 
-            // Force other critical fields to string tokens (harmless)
+
             ForceStringToken(itemObj, "_tpl");
             ForceStringToken(itemObj, "parentId");
             ForceStringToken(itemObj, "slotId");
@@ -207,7 +201,6 @@ internal static class OdinAssortLoader
         if (idMap.Count == 0)
             return;
 
-        // Pass 2: rewrite parentId references
         for (var i = 0; i < cleanedItems.Count; i++)
         {
             if (cleanedItems[i] is not JsonObject itemObj)
@@ -220,7 +213,7 @@ internal static class OdinAssortLoader
             }
         }
 
-        // Pass 3: rewrite barter_scheme keys
+
         if (assortRoot["barter_scheme"] is JsonObject barterObj)
         {
             var rewritten = new JsonObject();
@@ -233,7 +226,7 @@ internal static class OdinAssortLoader
             assortRoot["barter_scheme"] = rewritten;
         }
 
-        // Pass 4: rewrite loyal_level_items keys
+
         if (assortRoot["loyal_level_items"] is JsonObject loyalObj)
         {
             var rewritten = new JsonObject();

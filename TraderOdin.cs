@@ -46,27 +46,24 @@ public sealed class TraderOdin(
             "He is a former KSK elite soldier of the German Federal Armed Forces. Odin is known for his discipline, tactical expertise, and a no-nonsense attitude. He has a particularly good relationship with Mechanic, Prapor, and Sanitar."
         );
 
-        addCustomTraderHelper.SetTraderUpdateTime(_traderConfig, traderBase, 1800, 3600);
+        addCustomTraderHelper.SetTraderUpdateTime(_traderConfig, traderBase, 7200, 7200);
 
-        // --- Avatar routing (robust) ---
-        // base.json: "avatar": "/files/trader/avatar/odin.png"
+
         var avatarUrl = traderBase.Avatar ?? "";
         var avatarFileName = GetAvatarFileNameFromUrl(avatarUrl);
 
-        // You decided to use odin.png
+
         if (string.IsNullOrWhiteSpace(avatarFileName))
             avatarFileName = "odin.png";
 
         var avatarDiskPath = Path.Combine(traderDir, avatarFileName);
 
-        // 1) Register exact key the client is requesting (your log shows this)
-        //    Example: "/files/trader/avatar/odin.png"
+
         if (!string.IsNullOrWhiteSpace(avatarUrl))
         {
             imageRouter.AddRoute(avatarUrl, avatarDiskPath);
 
-            // 2) Also register without extension (pattern from your SalcosArmory overview)
-            //    Example: "/files/trader/avatar/odin"
+
             var noExt = RemoveFileExtensionFromUrl(avatarUrl);
             if (!string.IsNullOrWhiteSpace(noExt) && !string.Equals(noExt, avatarUrl, StringComparison.Ordinal))
             {
@@ -74,16 +71,16 @@ public sealed class TraderOdin(
             }
         }
 
-        // 3) Also register just the filename (some routers resolve this way)
+
         imageRouter.AddRoute(avatarFileName, avatarDiskPath);
 
-        // 4) And as a last fallback, by traderId (some older implementations do this)
+
         imageRouter.AddRoute(traderBase.Id, avatarDiskPath);
 
-        // --- Assort merge ---
+
         JsonObject mergedAssort = OdinAssortLoader.MergeAssortFromSplitFolders(traderDir);
 
-        // Use ModHelper deserialization so SPT converters (MongoId etc.) are applied
+
         var tmpFileName = "__merged_assort.tmp.json";
         var tmpPath = Path.Combine(traderDir, tmpFileName);
 
@@ -138,7 +135,7 @@ public sealed class TraderOdin(
 
         avatarUrl = avatarUrl.Replace('\\', '/');
 
-        // Remove only the last extension segment
+
         var lastDot = avatarUrl.LastIndexOf('.');
         var lastSlash = avatarUrl.LastIndexOf('/');
 

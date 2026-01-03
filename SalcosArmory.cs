@@ -24,7 +24,7 @@ public sealed record ModMetadata : AbstractModMetadata
 
     public override Dictionary<string, Range>? ModDependencies { get; init; } = new()
     {
-        { "com.wtt.commonlib", new Range("~2.0.8") }
+        { "com.wtt.commonlib", new Range("~2.0.9") }
     };
 
     public override string? Url { get; init; }
@@ -32,7 +32,7 @@ public sealed record ModMetadata : AbstractModMetadata
     public override List<string>? Incompatibilities { get; init; }
 }
 
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
+[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 3)]
 public sealed class SalcosArmoryMod(
     WTTServerCommonLib.WTTServerCommonLib wttCommon,
     DatabaseService databaseService,
